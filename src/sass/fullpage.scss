@@ -1,0 +1,39 @@
+%paginationMargin {
+  margin: -2px 0 0 -2px !important;
+}
+%paginationLong {
+  width: 25px !important;
+}
+%paginationActive {
+  @extend %paginationMargin;
+  @extend %paginationLong;
+}
+
+#fp-nav {
+  li {
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
+
+    a {
+      span {
+        background: #eee !important;
+        border-radius: 0 !important;
+        height: 4px !important;
+        width: 10px !important;
+        right: 50% !important;
+        left: initial !important;
+        transition: width .3s cubic-bezier(.43,-0.7,.32,3) !important;
+      }
+      &.active {
+        span {
+          @extend %paginationActive;
+        }
+      }
+      &:hover {
+        span {
+          @extend %paginationActive;
+        }
+      }
+    }
+  }
+}

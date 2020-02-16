@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+@import 'boilers';
+@import 'fullpage';
+@import 'home';
+
+//******************
+// Global Variables
+//******************
+
+// Colors
+
+
+//******************
+// Main Styles
+//******************
+
+body {
+  background: #fff;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+}
+

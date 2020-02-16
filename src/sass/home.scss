@@ -1,0 +1,45 @@
+.letter {
+  position: absolute;
+  top: 50%;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  perspective: 200px;
+}
+
+.preview-featured {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  perspective: 400px;
+}
+
+.preview-right {
+  height: 100%;
+}
+
+.preview-featured-fill {
+  height: 100%;
+  width: 100%;
+}
+
+.preview-img {
+  width: 50%;
+  margin: 0 0 0 auto;
+  overflow: hidden;
+  will-change: auto;
+  pointer-events: auto;
+  transition: width .35s ease-in-out;
+}
+
+.preview-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #fff;
+}
