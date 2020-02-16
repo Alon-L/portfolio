@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Dispatch, AnyAction } from 'redux';
+import { Dispatch } from 'redux';
 import { ADD_LETTER } from '../../../../store/types/home/hero';
 import { addLetter } from '../../../../store/actions/home/hero';
 

@@ -60,9 +60,6 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  node: {
-    fs: 'empty'
-  },
   plugins: [
     new HtmlWebPackPlugin({
       template: './public/index.html',

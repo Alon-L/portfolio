@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Strip from '../../../../assets/letters/strip.svg';
 import Letter from '../letters/Letter';
-import { AnyAction, Dispatch } from 'redux';
+import { Dispatch } from 'redux';
 import { SET_COL } from '../../../../store/types/home/hero';
 import { connect } from 'react-redux';
 import { HomeHeroCol } from '../../../../store/types';

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
-import { TweenLite } from 'gsap';
-import Logo from '../../essentials/Logo';
+import { Container } from 'react-bootstrap';
 import PreviewFeatured from './previews/PreviewFeatured';
 import PreviewFill from './previews/PreviewFill';
 import { StoreState } from '../../../store/state';
