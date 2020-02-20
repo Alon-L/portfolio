@@ -28,7 +28,6 @@ class HomeContentSocials extends Component {
   render() {
     return (
       <div className="d-flex">
-        {/* TODO: Add social media circles (stroke and fill when hover) */}
         {this.socials.map(({ icon, href }) => (
           <HomeContentSocial key={href} icon={icon} href={href}/>
         ))}
