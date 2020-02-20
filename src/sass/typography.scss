@@ -1,0 +1,14 @@
+.font-weight-black {
+  font-family: 'Poppins SemiBold', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: $anchor-color;
+  transition: 0.25s;
+
+  &:hover {
+    color: $anchor-hover-color;
+    text-decoration: none;
+  }
+}

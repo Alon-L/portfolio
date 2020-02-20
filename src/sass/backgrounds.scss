@@ -1,0 +1,30 @@
+$colors: ('brand', $brand-color),
+        ('white', white),
+        ('black', black) !default;
+$backgrounds: $colors !default;
+
+.color {
+  @each $label, $color in $colors {
+    &-#{$label} {
+      color: $color;
+    }
+  }
+}
+
+.background {
+  @each $label, $color in $colors {
+    &-#{$label} {
+      background-color: $color;
+    }
+  }
+}
+
+hr {
+  &.color {
+    @each $label, $color in $colors {
+      &-#{$label} {
+        border-color: $color;
+      }
+    }
+  }
+}

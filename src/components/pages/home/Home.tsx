@@ -5,8 +5,9 @@ import PreviewFill from './previews/PreviewFill';
 import { StoreState } from '../../../store/state';
 import { connect } from 'react-redux';
 import { HomeHeroInitialState } from '../../../store/reducers/home/hero';
-import HomeContent from './HomeContent';
+import HomeContent from './content/HomeContent';
 import HomeLettersMovement from '../../../internals/HomeLettersMovement';
+import Strip from '../../../assets/letters/strip.svg';
 
 interface Props {
   homeHero?: HomeHeroInitialState;

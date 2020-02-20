@@ -1,3 +1,5 @@
+@import 'content.scss';
+
 .letter {
   position: absolute;
   top: 50%;
@@ -24,15 +26,14 @@
 .preview-featured-fill {
   height: 100%;
   width: 100%;
+  background: $brand-color;
 }
 
 .preview-img {
   width: 50%;
+  height: 100%;
   margin: 0 0 0 auto;
   overflow: hidden;
-  will-change: auto;
-  pointer-events: auto;
-  transition: width .35s ease-in-out;
 }
 
 .preview-fill {
@@ -42,4 +43,23 @@
   height: 100%;
   overflow: hidden;
   background: #fff;
+}
+
+.preview-featured-image {
+  position: absolute;
+  left: 80%;
+  top: 80%;
+  transform: translate(-50%, -50%);
+}
+
+/********************
+Transformation #1
+*********************/
+
+@include media('<1100px') {
+  .preview-featured,
+  .preview-fill,
+  .letter {
+    display: none;
+  }
 }

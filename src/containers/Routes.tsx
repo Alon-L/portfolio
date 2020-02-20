@@ -10,7 +10,7 @@ class Routes extends Component {
           licenseKey={process.env.FULL_JS_LICENSE_KEY}
           scrollingSpeed={1000}
           anchors={['hero', 'secondPage']}
-          sectionsColor={['#C63D0F', '#1BBC9B', '#eeff70', '#63a8ff', '#fff']}
+          sectionsColor={['#fff', '#1BBC9B', '#eeff70', '#63a8ff', '#fff']}
           navigation={true}
           navigationPosition={'right'}
           render={() => {

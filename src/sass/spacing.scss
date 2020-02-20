@@ -1,0 +1,216 @@
+$spacer: 1rem;
+
+.mt {
+  @each $size, $length in (6, 4),
+          (n6, -4),
+          (7, 5),
+          (n7, -5),
+          (8, 8),
+          (n8, -8),
+          (9, 10),
+          (n9, -10) {
+    &-#{$size} {
+      margin-top: ($spacer * $length) !important;
+    }
+  }
+}
+
+.mb {
+  @each $size, $length in (6, 4),
+          (n6, -4),
+          (7, 5),
+          (n7, -5),
+          (8, 8),
+          (n8, -8),
+          (9, 10),
+          (n9, -10) {
+    &-#{$size} {
+      margin-bottom: ($spacer * $length) !important;
+    }
+  }
+}
+
+.mr {
+  @each $size, $length in (6, 4),
+          (n6, -4),
+          (7, 5),
+          (n7, -5),
+          (8, 8),
+          (n8, -8),
+          (9, 10),
+          (n9, -10) {
+    &-#{$size} {
+      margin-right: ($spacer * $length) !important;
+    }
+  }
+}
+
+.ml {
+  @each $size, $length in (6, 4),
+          (n6, -4),
+          (7, 5),
+          (n7, -5),
+          (8, 8),
+          (n8, -8),
+          (9, 10),
+          (n9, -10) {
+    &-#{$size} {
+      margin-left: ($spacer * $length) !important;
+    }
+  }
+}
+
+.mx {
+  @each $size, $length in (6, 4),
+          (n6, -4),
+          (7, 5),
+          (n7, -5),
+          (8, 8),
+          (n8, -8),
+          (9, 10),
+          (n9, -10) {
+    &-#{$size} {
+      margin-left: ($spacer * $length) !important;
+      margin-right: ($spacer * $length) !important;
+    }
+  }
+}
+
+.my {
+  @each $size, $length in (6, 4),
+          (n6, -4),
+          (7, 5),
+          (n7, -5),
+          (8, 8),
+          (n8, -8),
+          (9, 10),
+          (n9, -10) {
+    &-#{$size} {
+      margin-top: ($spacer * $length) !important;
+      margin-bottom: ($spacer * $length) !important;
+    }
+  }
+}
+
+.m {
+  @each $size, $length in (6, 4),
+          (n6, -4),
+          (7, 5),
+          (n7, -5),
+          (8, 8),
+          (n8, -8),
+          (9, 10),
+          (n9, -10) {
+    &-#{$size} {
+      margin: ($spacer * $length) !important;
+    }
+  }
+}
+
+.pt {
+  @each $size, $length in (6, 4),
+          (n6, -4),
+          (7, 5),
+          (n7, -5),
+          (8, 8),
+          (n8, -8),
+          (9, 10),
+          (n9, -10) {
+    &-#{$size} {
+      padding-top: ($spacer * $length) !important;
+    }
+  }
+}
+
+.pb {
+  @each $size, $length in (6, 4),
+          (n6, -4),
+          (7, 5),
+          (n7, -5),
+          (8, 8),
+          (n8, -8),
+          (9, 10),
+          (n9, -10) {
+      &-#{$size} {
+        padding-bottom: ($spacer * $length) !important;
+      }
+    }
+}
+
+.pr {
+  @each $size, $length in (6, 4),
+          (n6, -4),
+          (7, 5),
+          (n7, -5),
+          (8, 8),
+          (n8, -8),
+          (9, 10),
+          (n9, -10) {
+      &-#{$size} {
+        padding-right: ($spacer * $length) !important;
+      }
+  }
+}
+
+.pl {
+  @each $size, $length in (6, 4),
+          (n6, -4),
+          (7, 5),
+          (n7, -5),
+          (8, 8),
+          (n8, -8),
+          (9, 10),
+          (n9, -10) {
+      &-#{$size} {
+        padding-left: ($spacer * $length) !important;
+      }
+  }
+}
+
+.px {
+  @each $size, $length in (6, 4),
+          (n6, -4),
+          (7, 5),
+          (n7, -5),
+          (8, 8),
+          (n8, -8),
+          (9, 10),
+          (n9, -10) {
+      &-#{$size} {
+        padding-left: ($spacer * $length) !important;
+        padding-right: ($spacer * $length) !important;
+      }
+  }
+}
+
+.py {
+  @each $size, $length in (6, 4),
+          (n6, -4),
+          (7, 5),
+          (n7, -5),
+          (8, 8),
+          (n8, -8),
+          (9, 10),
+          (n9, -10) {
+      &-#{$size} {
+        padding-top: ($spacer * $length) !important;
+        padding-bottom: ($spacer * $length) !important;
+      }
+  }
+}
+
+.p {
+  @each $size, $length in (6, 4),
+          (n6, -4),
+          (7, 5),
+          (n7, -5),
+          (8, 8),
+          (n8, -8),
+          (9, 10),
+          (n9, -10) {
+      &-#{$size} {
+        padding: ($spacer * $length) !important;
+      }
+    }
+}
+

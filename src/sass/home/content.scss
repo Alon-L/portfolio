@@ -1,0 +1,24 @@
+.home-content-responsive-logo {
+  display: none;
+
+  @include media('<1100px') {
+    display: block;
+  }
+}
+
+.home-content-logo {
+  top: 0;
+}
+
+.home-content, .letter-responsive {
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  width: 60%;
+}
+
+@include media('<tablet') {
+  .home-content {
+    top: 25%;
+  }
+}

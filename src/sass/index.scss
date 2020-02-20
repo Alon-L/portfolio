@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import '~include-media/dist/_include-media.scss';
 
-@import 'boilers';
+@import 'colors';
+@import 'backgrounds';
+@import 'spacing';
+@import 'typography';
+@import 'icons';
 @import 'fullpage';
-@import 'home';
+@import 'home/home';
 
 //******************
 // Global Variables
