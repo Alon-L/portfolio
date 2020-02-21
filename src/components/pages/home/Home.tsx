@@ -5,7 +5,7 @@ import PreviewFill from './previews/PreviewFill';
 import { StoreState } from '../../../store/state';
 import { connect } from 'react-redux';
 import { HomeHeroInitialState } from '../../../store/reducers/home/hero';
-import HomeContent from './content/HomeContent';
+import HomeContentTransformations from './content/HomeContentTransformations';
 import HomeLettersMovement from '../../../internals/HomeLettersMovement';
 import Strip from '../../../assets/letters/strip.svg';
 
@@ -28,7 +28,7 @@ class Home extends Component<Props> {
       <Container fluid className="h-100">
         <PreviewFeatured/>
         <PreviewFill/>
-        <HomeContent/>
+        <HomeContentTransformations/>
       </Container>
     );
   }
