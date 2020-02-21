@@ -39,8 +39,7 @@ module.exports = {
       },
       {
         test: /\.(eot|woff|woff2|ttf|png|jpg|gif)$/,
-        exclude: /node_modules/,
-        use: ['file-loader?name=[name].[ext]'],
+        loader: 'url-loader'
       },
       {
         test: /\.svg$/,
@@ -54,7 +53,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js']
+    extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
     filename: 'bundle.js',

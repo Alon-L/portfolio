@@ -3,9 +3,10 @@ import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 import { ADD_LETTER } from '../../../../store/types/home/hero';
 import { addLetter } from '../../../../store/actions/home/hero';
+import { Image } from '../../../../types';
 
 interface Props {
-  LetterSVG: React.ComponentType<any>;
+  LetterSVG: React.ComponentType<Image>;
   addLetter?: typeof addLetter;
 }
 

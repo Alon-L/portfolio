@@ -4,7 +4,7 @@ $letter-combined-height: 50px;
 .home-content-responsive-logo {
   display: none;
 
-  @include media('<#{$home-page-transformation-width}') {
+  @include media('<#{$home-section-transformation-width}') {
     display: block;
   }
 
@@ -32,11 +32,11 @@ $letter-combined-height: 50px;
     top: 25%;
   }
 
-  @include media ('<#{$home-page-transformation-width + 200px}') {
+  @include media ('<#{$home-section-transformation-width + 200px}') {
     width: 75%;
   }
 
-  @include media('<#{$home-page-transformation-width}') {
+  @include media('<#{$home-section-transformation-width}') {
     width: 90%;
   }
 }

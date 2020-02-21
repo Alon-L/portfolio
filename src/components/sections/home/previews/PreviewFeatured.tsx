@@ -6,7 +6,7 @@ import Laptop from '../../../../assets/laptop.svg';
 class PreviewFeatured extends Component {
   render() {
     return (
-      <div className="preview-featured">
+      <div className="preview-featured overflow-hidden">
         <div className="preview-right">
           <div className="preview-featured-fill">
             <div className="preview-img">

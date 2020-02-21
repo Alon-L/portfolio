@@ -28,3 +28,15 @@ hr {
     }
   }
 }
+
+a {
+  &.color {
+    @each $label, $color in $colors {
+      &-#{$label} {
+        &:hover {
+          color: $color !important;
+        }
+      }
+    }
+  }
+}

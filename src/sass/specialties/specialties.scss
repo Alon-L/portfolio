@@ -1,0 +1,32 @@
+.specialties-section {
+  background: url('../assets/dot-pattern.png') top 200px left -100px no-repeat,
+  url('../assets/dot-pattern.png') bottom 100px right -100px no-repeat;
+}
+
+.specialties {
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1rem;
+}
+
+.specialty-box {
+  background-position: center center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, .55);
+  background-blend-mode: multiply;
+  transition: all .3s ease-in-out;
+
+  .title {
+    transition: all .3s ease-in-out;
+  }
+
+  &:hover {
+    background-color: initial;
+
+    .title {
+      transform: translateY(-25px);
+      opacity: 0;
+    }
+  }
+}
