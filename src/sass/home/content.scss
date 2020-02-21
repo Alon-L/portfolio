@@ -1,24 +1,48 @@
+$home-content-logo-height: 35px;
+$letter-combined-height: 50px;
+
 .home-content-responsive-logo {
   display: none;
 
-  @include media('<1100px') {
+  @include media('<#{$home-page-transformation-width}') {
     display: block;
+  }
+
+  @include media('<tablet') {
+    .letter-combined {
+      transform: translateY(-50%);
+      position: absolute;
+      right: 0;
+      top: $letter-combined-height - $home-content-logo-height;
+      width: $letter-combined-height;
+    }
   }
 }
 
 .home-content-logo {
   top: 0;
+  width: auto;
+  height: $home-content-logo-height;
 }
 
-.home-content, .letter-responsive {
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-  width: 60%;
-}
+.home-content {
+  width: 65%;
 
-@include media('<tablet') {
-  .home-content {
+  @include media('<tablet') {
     top: 25%;
+  }
+
+  @include media ('<#{$home-page-transformation-width + 200px}') {
+    width: 75%;
+  }
+
+  @include media('<#{$home-page-transformation-width}') {
+    width: 90%;
+  }
+}
+
+.home-content-col {
+  @include media('<tablet') {
+    height: 100%;
   }
 }

@@ -16,13 +16,17 @@
 
     a {
       span {
-        background: #eee !important;
+        background-color: #eee !important;
         border-radius: 0 !important;
         height: 4px !important;
         width: 10px !important;
         right: 50% !important;
         left: initial !important;
         transition: width .3s cubic-bezier(.43,-0.7,.32,3) !important;
+
+        @include media('<#{$home-page-transformation-width}') {
+          background-color: $brand-color !important;
+        }
       }
       &.active {
         span {

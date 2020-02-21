@@ -52,11 +52,7 @@
   transform: translate(-50%, -50%);
 }
 
-/********************
-Transformation #1
-*********************/
-
-@include media('<1100px') {
+@include media('<#{$home-page-transformation-width}') {
   .preview-featured,
   .preview-fill,
   .letter {
