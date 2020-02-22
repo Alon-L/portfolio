@@ -8,8 +8,8 @@
 @import 'icons';
 @import 'sections';
 @import 'fullpage';
-@import 'home/home';
-@import 'specialties/specialties';
+@import 'landing/landing';
+@import 'specialty/specialty';
 
 //******************
 // Global Variables
@@ -26,6 +26,5 @@ body {
   background: #fff;
   color: #000;
   font-family: 'Poppins', sans-serif;
-  min-height: 100vh;
 }
 

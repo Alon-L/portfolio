@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import HomeContentLogo from './HomeContentLogo';
 import HomeContentResponsiveLogo from './HomeContentResponsiveLogo';
-import CompleteCenter from '../../../../tools/flexbox/CompleteCenter';
+import FlexboxCompleteCenter from '../../../../tools/flexbox/FlexboxCompleteCenter';
 import HomeContent from './HomeContent';
 
 class HomeContentTransformations extends Component {
@@ -13,9 +13,9 @@ class HomeContentTransformations extends Component {
           <HomeContentLogo/>
           <Row className="h-100 mr-0">
             <Col md={6} className="home-content-col">
-              <CompleteCenter>
+              <FlexboxCompleteCenter>
                 <HomeContent/>
-              </CompleteCenter>
+              </FlexboxCompleteCenter>
             </Col>
             <HomeContentResponsiveLogo/>
           </Row>

@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
-import Home from '../components/pages/landing/home/Home';
-import ReactFullpage from '@fullpage/react-fullpage';
-import Specialties from '../components/pages/landing/specialties/Specialties';
+import { Route, Switch } from 'react-router-dom';
+import LandingPage from '../components/pages/landing/LandingPage';
+import ProjectsPage from '../components/pages/projects/ProjectsPage';
 
 class Routes extends Component {
   render() {
     return (
       <main>
-        <Home/>
-        <Specialties/>
+        <Switch>
+          <Route exact={true} path="/">
+            <LandingPage/>
+          </Route>
+
+          <Route path="/projects">
+            <ProjectsPage/>
+          </Route>
+        </Switch>
       </main>
     );
   }

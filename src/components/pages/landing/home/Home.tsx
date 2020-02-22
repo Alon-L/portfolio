@@ -25,7 +25,7 @@ class Home extends Component<Props> {
 
   render() {
     return (
-      <Container fluid className="section section-fullheight">
+      <Container fluid className="section section-home section-fullheight">
         <PreviewFeatured/>
         <PreviewFill/>
         <HomeContentTransformations/>

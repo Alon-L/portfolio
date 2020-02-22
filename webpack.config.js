@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 require('dotenv').config();
 
 module.exports = {
@@ -72,9 +73,13 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.FULL_JS_LICENSE_KEY': JSON.stringify(process.env.FULL_JS_LICENSE_KEY),
     }),
+    new CopyWebpackPlugin([ { from: 'src/assets', to: 'assets' } ])
   ],
   devServer: {
-    contentBase: './public/index.html',
+    contentBase: [
+      './public/index.html',
+      path.join(__dirname, 'src/assets')
+    ],
     historyApiFallback: true,
     disableHostCheck: true // TODO: Remove this line in production
   }

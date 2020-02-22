@@ -23,10 +23,6 @@
         right: 50% !important;
         left: initial !important;
         transition: width .3s cubic-bezier(.43,-0.7,.32,3) !important;
-
-        @include media('<#{$home-section-transformation-width}') {
-          background-color: $brand-color !important;
-        }
       }
       &.active {
         span {

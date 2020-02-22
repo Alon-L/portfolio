@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 interface Props {
-  children?: JSX.Element;
+  children?: JSX.Element | JSX.Element[];
 }
 
-class CompleteCenter extends Component<Props> {
+class FlexboxCompleteCenter extends Component<Props> {
   public props: Props;
 
   render() {
@@ -17,4 +17,4 @@ class CompleteCenter extends Component<Props> {
   }
 }
 
-export default CompleteCenter;
+export default FlexboxCompleteCenter;

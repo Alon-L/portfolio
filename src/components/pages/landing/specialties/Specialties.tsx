@@ -1,13 +1,6 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
-import { Image } from '../../../../types';
 import SpecialtyBox from './SpecialtyBox';
-import frontend from '../../../../assets/specialties/frontend.jpg';
-import software from '../../../../assets/specialties/software.jpg';
-import backend from '../../../../assets/specialties/backend.jpg';
-import browser from '../../../../assets/specialties/browser.jpg';
-import graphics from '../../../../assets/specialties/graphics.jpg';
-import discordBots from '../../../../assets/specialties/discord-bots.png';
 import SpecialtiesBackground from './SpecialtiesBackground';
 
 export interface Specialty {
@@ -16,7 +9,8 @@ export interface Specialty {
     rows: number;
     columns: number;
   },
-  background: Image;
+  background: string;
+  placeholder: string;
 }
 
 class Specialties extends Component {
@@ -27,7 +21,8 @@ class Specialties extends Component {
         rows: 2,
         columns: 4,
       },
-      background: frontend,
+      background: 'frontend.jpg',
+      placeholder: 'frontend-placeholder.jpg',
     },
     {
       title: 'Backend',
@@ -35,7 +30,8 @@ class Specialties extends Component {
         rows: 3,
         columns: 2,
       },
-      background: backend,
+      background: 'backend.jpg',
+      placeholder: 'backend-placeholder.jpg',
     },
     {
       title: 'Desktop Software',
@@ -43,7 +39,8 @@ class Specialties extends Component {
         rows: 2,
         columns: 2,
       },
-      background: software,
+      background: 'software.jpg',
+      placeholder: 'software-placeholder.jpg',
     },
     {
       title: 'Browser Extensions',
@@ -51,15 +48,17 @@ class Specialties extends Component {
         rows: 2,
         columns: 2,
       },
-      background: browser,
+      background: 'browser.jpg',
+      placeholder: 'browser-placeholder.jpg',
     },
     {
-      title: 'Graphics Development',
+      title: 'Graphic Developments',
       dimensions: {
         rows: 3,
         columns: 2,
       },
-      background: graphics,
+      background: 'graphics.jpg',
+      placeholder: 'graphics-placeholder.jpg',
     },
     {
       title: 'Discord Bots',
@@ -67,7 +66,8 @@ class Specialties extends Component {
         rows: 2,
         columns: 4,
       },
-      background: discordBots,
+      background: 'discord-bots.png',
+      placeholder: 'discord-bots-placeholder.png',
     }
   ];
 
@@ -79,8 +79,8 @@ class Specialties extends Component {
           <div className="section-spacer">
             <h1 className="text-center mb-5 font-weight-bold">Specialties</h1>
             <div className="specialties vh-100">
-              {this.specialties.map(({ title, dimensions, background }) => (
-                <SpecialtyBox key={title} title={title} dimensions={dimensions} background={background}/>
+              {this.specialties.map(({ title, dimensions, background, placeholder }) => (
+                <SpecialtyBox key={title} title={title} dimensions={dimensions} background={background} placeholder={placeholder}/>
               ))}
             </div>
           </div>
