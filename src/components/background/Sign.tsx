@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Image } from '../../types';
-import Circle from '../../assets/signs/circle.svg';
 
 export interface SignProps {
-  left?: number;
-  top?: number;
-  right?: number;
-  bottom?: number;
+  left?: number | string;
+  top?: number | string;
+  right?: number | string;
+  bottom?: number | string;
 }
 
 interface Props extends SignProps {

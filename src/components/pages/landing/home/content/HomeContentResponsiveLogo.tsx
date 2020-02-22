@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Combined from '../../../../assets/letters/combined.svg';
+import Combined from '../../../../../assets/letters/combined.svg';
 import { Col } from 'react-bootstrap';
-import CompleteCenter from '../../../tools/flexbox/CompleteCenter';
+import CompleteCenter from '../../../../tools/flexbox/CompleteCenter';
 
 class HomeContentResponsiveLogo extends Component {
   render() {

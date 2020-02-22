@@ -8,6 +8,17 @@
   grid-template-rows: repeat(6, 1fr);
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 1rem;
+
+  @include media('<560px') {
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
+
+    .specialty-box {
+      grid-row: span 3 !important;
+      grid-column: span 3 !important;
+    }
+  }
 }
 
 .specialty-box {
@@ -18,6 +29,7 @@
   transition: all .3s ease-in-out;
 
   .title {
+    letter-spacing: 2px;
     transition: all .3s ease-in-out;
   }
 
@@ -28,5 +40,11 @@
       transform: translateY(-25px);
       opacity: 0;
     }
+  }
+}
+
+.specialty-box-background {
+  @include media('<1350px') {
+    display: none;
   }
 }

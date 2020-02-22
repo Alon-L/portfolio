@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
-import { Image } from '../../../types';
+import { Image } from '../../../../types';
 import SpecialtyBox from './SpecialtyBox';
-import frontend from '../../../assets/specialties/frontend.jpg';
-import software from '../../../assets/specialties/software.jpg';
-import backend from '../../../assets/specialties/backend.jpg';
-import browser from '../../../assets/specialties/browser.jpg';
-import graphics from '../../../assets/specialties/graphics.jpg';
-import discordBots from '../../../assets/specialties/discord-bots.png';
+import frontend from '../../../../assets/specialties/frontend.jpg';
+import software from '../../../../assets/specialties/software.jpg';
+import backend from '../../../../assets/specialties/backend.jpg';
+import browser from '../../../../assets/specialties/browser.jpg';
+import graphics from '../../../../assets/specialties/graphics.jpg';
+import discordBots from '../../../../assets/specialties/discord-bots.png';
 import SpecialtiesBackground from './SpecialtiesBackground';
 
 export interface Specialty {

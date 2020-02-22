@@ -17,7 +17,6 @@ class SpecialtyBox extends Component<Props> {
 
     return (
       <div className="specialty-box" style={boxStyle}>
-        <div className="specialty-box-background"/>
         <a href="#" className="color-white d-block h-100">
           <div className="d-flex h-100 justify-content-center align-items-center">
             <h5 className="title font-weight-bold text-uppercase text-center">{title}</h5>

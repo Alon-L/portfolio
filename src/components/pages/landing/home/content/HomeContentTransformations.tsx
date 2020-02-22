@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import HomeContentLogo from './HomeContentLogo';
 import HomeContentResponsiveLogo from './HomeContentResponsiveLogo';
-import CompleteCenter from '../../../tools/flexbox/CompleteCenter';
+import CompleteCenter from '../../../../tools/flexbox/CompleteCenter';
 import HomeContent from './HomeContent';
 
 class HomeContentTransformations extends Component {

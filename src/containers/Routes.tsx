@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Home from '../components/sections/home/Home';
+import Home from '../components/pages/landing/home/Home';
 import ReactFullpage from '@fullpage/react-fullpage';
-import Specialties from '../components/sections/specialties/Specialties';
+import Specialties from '../components/pages/landing/specialties/Specialties';
 
 class Routes extends Component {
   render() {

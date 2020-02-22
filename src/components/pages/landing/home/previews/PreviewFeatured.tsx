@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Blank from '../../../../assets/letters/blank.svg';
+import Blank from '../../../../../assets/letters/blank.svg';
 import Letter from '../letters/Letter';
-import Laptop from '../../../../assets/laptop.svg';
+import Laptop from '../../../../../assets/laptop.svg';
 
 class PreviewFeatured extends Component {
   render() {

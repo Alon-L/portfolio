@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Logo from '../../../essentials/Logo';
+import Logo from '../../../../essentials/Logo';
 
 class HomeContentLogo extends Component {
   render() {

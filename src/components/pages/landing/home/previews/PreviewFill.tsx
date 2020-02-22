@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Strip from '../../../../assets/letters/strip.svg';
+import Strip from '../../../../../assets/letters/strip.svg';
 import Letter from '../letters/Letter';
 import { Dispatch } from 'redux';
-import { SET_COL } from '../../../../store/types/home/hero';
+import { SET_COL } from '../../../../../store/types/home/hero';
 import { connect } from 'react-redux';
-import { HomeHeroCol } from '../../../../store/types';
-import { setPrimaryCol } from '../../../../store/actions/home/hero';
+import { HomeHeroCol } from '../../../../../store/types';
+import { setPrimaryCol } from '../../../../../store/actions/home/hero';
 import { TweenLite } from "gsap";
 
 interface Props {

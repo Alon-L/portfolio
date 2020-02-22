@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Social } from './HomeContentSocials';
-import CircularIcon from '../../../../icons/CircularIcon';
+import CircularIcon from '../../../../../icons/CircularIcon';
 
 type Props = Social;
 
