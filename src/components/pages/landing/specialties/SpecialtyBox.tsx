@@ -23,7 +23,7 @@ class SpecialtyBox extends Component<Props> {
 
     return (
       <LazyLoadingBackground placeholder={placeholderPath} src={backgroundPath} className="specialty-box" style={boxStyle}>
-        <Link to="projects" className="color-white d-block h-100">
+        <Link to="/projects" className="color-white d-block h-100">
           <div className="d-flex h-100 justify-content-center align-items-center">
             <h5 className="specialty-title font-weight-bold text-uppercase text-center">{title}</h5>
           </div>
