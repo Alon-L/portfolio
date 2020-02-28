@@ -5,6 +5,13 @@ $home-section-transformation-width: 1100px !default;
 
   &-spacer {
     margin-top: 4rem;
+
+    &-large {
+      @extend .mt-8;
+      @include media('<tablet') {
+        margin-top: 4rem !important;
+      }
+    }
   }
 
   &-fullheight {

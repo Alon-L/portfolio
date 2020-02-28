@@ -1,10 +1,10 @@
-$colors: ('brand', $brand-color),
+$colors_: ('brand', $brand-color),
         ('white', white),
-        ('black', black) !default;
-$backgrounds: $colors !default;
+        ('black', black) !default !global;
+$backgrounds: $colors_ !default;
 
 .color {
-  @each $label, $color in $colors {
+  @each $label, $color in $colors_ {
     &-#{$label} {
       color: $color;
     }
@@ -12,7 +12,7 @@ $backgrounds: $colors !default;
 }
 
 .background {
-  @each $label, $color in $colors {
+  @each $label, $color in $colors_ {
     &-#{$label} {
       background-color: $color;
     }
@@ -21,7 +21,7 @@ $backgrounds: $colors !default;
 
 hr {
   &.color {
-    @each $label, $color in $colors {
+    @each $label, $color in $colors_ {
       &-#{$label} {
         border-color: $color;
       }
@@ -31,7 +31,7 @@ hr {
 
 a {
   &.color {
-    @each $label, $color in $colors {
+    @each $label, $color in $colors_ {
       &-#{$label} {
         &:hover {
           color: $color !important;

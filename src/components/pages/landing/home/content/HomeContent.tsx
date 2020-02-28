@@ -5,7 +5,7 @@ class HomeContent extends Component {
   render() {
     return (
       <div className="home-content mt-n5">
-        <h1 className="font-weight-black">Hey, I&apos;m Alon.</h1>
+        <h1 className="title">Hey, I&apos;m Alon.</h1>
         <hr className="color-brand w-75 ml-0"/>
         <div className="mb-5">
           <h3 className="font-weight-bold">Fullstack Development at its Peak</h3>

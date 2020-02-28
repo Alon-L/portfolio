@@ -12,3 +12,7 @@ a {
     text-decoration: none;
   }
 }
+
+.title {
+  @extend .font-weight-black;
+}

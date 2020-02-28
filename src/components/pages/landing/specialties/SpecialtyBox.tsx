@@ -2,6 +2,7 @@ import path from 'path';
 import React, { Component } from 'react';
 import { Specialty } from './Specialties';
 import LazyLoadingBackground from '../../../tools/lazyloading/LazyLoadingBackground';
+import { Link } from 'react-router-dom';
 
 type Props = Specialty;
 
@@ -22,11 +23,11 @@ class SpecialtyBox extends Component<Props> {
 
     return (
       <LazyLoadingBackground placeholder={placeholderPath} src={backgroundPath} className="specialty-box" style={boxStyle}>
-        <a href="#" className="color-white d-block h-100">
+        <Link to="projects" className="color-white d-block h-100">
           <div className="d-flex h-100 justify-content-center align-items-center">
-            <h5 className="title font-weight-bold text-uppercase text-center">{title}</h5>
+            <h5 className="specialty-title font-weight-bold text-uppercase text-center">{title}</h5>
           </div>
-        </a>
+        </Link>
       </LazyLoadingBackground>
     );
   }

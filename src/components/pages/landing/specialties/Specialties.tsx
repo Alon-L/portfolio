@@ -73,19 +73,22 @@ class Specialties extends Component {
 
   render() {
     return (
-      <div className="specialties-section position-relative">
-        <SpecialtiesBackground/>
-        <Container className="section mb-5 position-relative">
-          <div className="section-spacer">
-            <h1 className="text-center mb-5 font-weight-bold">Specialties</h1>
-            <div className="specialties vh-100">
-              {this.specialties.map(({ title, dimensions, background, placeholder }) => (
-                <SpecialtyBox key={title} title={title} dimensions={dimensions} background={background} placeholder={placeholder}/>
-              ))}
+      <section className="section section-specialties">
+        <div className="position-relative">
+          <SpecialtiesBackground/>
+          <Container className="section mb-5 position-relative">
+            <div className="section-spacer">
+              <h1 className="title text-center mb-5">Specialties</h1>
+              <div className="specialties vh-100">
+                {this.specialties.map(({ title, dimensions, background, placeholder }) => (
+                  <SpecialtyBox key={title} title={title} dimensions={dimensions} background={background}
+                                placeholder={placeholder}/>
+                ))}
+              </div>
             </div>
-          </div>
-        </Container>
-      </div>
+          </Container>
+        </div>
+      </section>
     );
   }
 }

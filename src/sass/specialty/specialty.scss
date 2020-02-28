@@ -4,7 +4,6 @@ $square-border-radius: 130px;
 
 .go-back {
   position: fixed;
-  z-index: 1000;
   top: 0;
   left: 0;
 
@@ -67,6 +66,9 @@ $square-border-radius: 130px;
 }
 
 .specialty-background-image {
+  border-radius: 15px;
+  box-shadow: 10px 10px 25px 0 rgba(0, 0, 0, .35);
+
   @include media('<1520px') {
     width: 800px;
   }

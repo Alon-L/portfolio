@@ -1,0 +1,29 @@
+.priority {
+  @each $label, $index in (high, 100),
+          (low, 10),
+          (1, 1),
+          (0, 0),
+          (n1, -1) {
+    &-#{$label} {
+      z-index: #{$index} !important;
+    }
+  }
+}
+
+.radius {
+  @each $label, $size in (standard, .65rem),
+          (small, .5rem),
+          (large, .8rem) {
+    &-#{$label} {
+      border-radius: #{$size} !important;
+    }
+  }
+}
+
+.textarea {
+  &-resize {
+    &-disable {
+      resize: none;
+    }
+  }
+}

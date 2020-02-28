@@ -1,8 +1,13 @@
-import path from 'path';
 import React, { Component } from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
+import path from 'path';
 import ProjectGoBack from './ProjectGoBack';
 import ProjectSection from './ProjectSection';
+
+export interface ProjectButtons {
+  visit?: string;
+  source?: string;
+}
 
 export interface Project {
   title: string;
@@ -12,7 +17,8 @@ export interface Project {
   colors: {
     primary: string;
     secondary: string;
-  }
+  },
+  buttons?: ProjectButtons;
 }
 
 interface State {
@@ -29,6 +35,10 @@ class ProjectsPage extends Component<{}, State> {
       colors: {
         primary: '#35A591',
         secondary: '#5AD3BD'
+      },
+      buttons: {
+        visit: 'https://plicked.com',
+        source: 'https://github.com'
       }
     },
     {
@@ -38,7 +48,7 @@ class ProjectsPage extends Component<{}, State> {
       background: 'plicked.png',
       colors: {
         primary: '#8a39bf',
-        secondary: '#aa46eb'
+        secondary: '#b64afb'
       }
     }
   ];
@@ -75,7 +85,8 @@ class ProjectsPage extends Component<{}, State> {
                       desc,
                       toolsUsed,
                       background,
-                      colors: { primary, secondary }
+                      colors: { primary, secondary },
+                      buttons
                     }, i
                   ) => {
                     const backgroundPath = path.join('../assets/specialties/pages/frontend/', background);
@@ -86,7 +97,7 @@ class ProjectsPage extends Component<{}, State> {
                       <div key={title} data-background-color={primary} className="section overflow-hidden"
                         style={sectionStyle}>
                         <ProjectSection title={title} desc={desc} toolsUsed={toolsUsed} background={backgroundPath}
-                          colors={{ primary, secondary }} reverse={i % 2 !== 0}/>
+                          colors={{ primary, secondary }} buttons={buttons} reverse={i % 2 !== 0}/>
                       </div>
                     );
                   })

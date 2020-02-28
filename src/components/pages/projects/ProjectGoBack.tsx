@@ -14,7 +14,7 @@ class ProjectGoBack extends Component<Props> {
     const { color } = this.props;
 
     return (
-      <div className="go-back">
+      <div className="go-back priority-high">
         <div className="position-relative vw-100">
           <Link to="/" className="color-black position-absolute arrow">
             <FontAwesomeIcon className="arrow-icon" color={color} icon={faArrowLeft} size={'2x'}/>

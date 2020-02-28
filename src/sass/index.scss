@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import '~bootstrap/scss/bootstrap';
 @import '~include-media/dist/_include-media.scss';
 
 @import 'colors';
 @import 'backgrounds';
 @import 'spacing';
+@import 'transformations';
 @import 'typography';
 @import 'icons';
+@import 'buttons';
 @import 'sections';
 @import 'fullpage';
 @import 'landing/landing';
@@ -24,7 +27,7 @@
 
 body {
   background: #fff;
-  color: #000;
+  color: #1f2732;
   font-family: 'Poppins', sans-serif;
 }
 

@@ -2,3 +2,5 @@ $brand-color: #6507fa;
 
 $anchor-color: darken($brand-color, 5%);
 $anchor-hover-color: lighten($anchor-color, 5%);
+
+$brand-hover-color: lighten($brand-color, 5%);

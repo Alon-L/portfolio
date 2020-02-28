@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container } from 'react-bootstrap';
+import { Col, Container } from 'react-bootstrap';
 import PreviewFeatured from './previews/PreviewFeatured';
 import PreviewFill from './previews/PreviewFill';
 import { StoreState } from '../../../../store/state';
@@ -7,7 +7,6 @@ import { connect } from 'react-redux';
 import { HomeHeroInitialState } from '../../../../store/reducers/home/hero';
 import HomeContentTransformations from './content/HomeContentTransformations';
 import HomeLettersMovement from '../../../../internals/HomeLettersMovement';
-import Strip from '../../../../assets/letters/strip.svg';
 
 interface Props {
   homeHero?: HomeHeroInitialState;
@@ -25,11 +24,13 @@ class Home extends Component<Props> {
 
   render() {
     return (
-      <Container fluid className="section section-home section-fullheight">
-        <PreviewFeatured/>
-        <PreviewFill/>
-        <HomeContentTransformations/>
-      </Container>
+      <section className="section section-home section-fullheight">
+        <Container fluid className="vh-100">
+          <PreviewFeatured/>
+          <PreviewFill/>
+          <HomeContentTransformations/>
+        </Container>
+      </section>
     );
   }
 }

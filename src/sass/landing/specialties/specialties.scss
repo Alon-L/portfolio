@@ -1,4 +1,4 @@
-.specialties-section {
+.section-specialties {
   background: url('../assets/dot-pattern.png') top 200px left -100px no-repeat,
   url('../assets/dot-pattern.png') bottom 100px right -100px no-repeat;
 }
@@ -13,33 +13,36 @@
     grid-template-rows: auto;
     grid-auto-rows: auto;
     grid-template-columns: repeat(3, 1fr);
-
-    .specialty-box {
-      grid-row: span 3 !important;
-      grid-column: span 3 !important;
-    }
   }
 }
 
-.specialty-box {
-  background-position: center center;
-  background-size: cover;
-  background-color: rgba(0, 0, 0, .55);
-  background-blend-mode: multiply;
-  transition: all .3s ease-in-out;
-
-  .title {
-    letter-spacing: 2px;
+.specialty {
+  &-box {
+    background-position: center center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, .55);
+    background-blend-mode: multiply;
+    border-radius: 5px;
     transition: all .3s ease-in-out;
+
+    @include media('<560px') {
+      grid-row: span 3 !important;
+      grid-column: span 3 !important;
+    }
+
+    &:hover {
+      background-color: initial;
+
+      .specialty-title {
+        transform: translateY(-25px);
+        opacity: 0;
+      }
+    }
   }
 
-  &:hover {
-    background-color: initial;
-
-    .title {
-      transform: translateY(-25px);
-      opacity: 0;
-    }
+  &-title {
+    letter-spacing: 2px;
+    transition: all .3s ease-in-out;
   }
 }
 

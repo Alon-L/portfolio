@@ -1,0 +1,21 @@
+.contact-form {
+  label {
+    @extend .font-weight-bold;
+    @extend .mb-4;
+    @extend .w-100;
+  }
+
+  .form-control {
+    box-shadow: none !important;
+
+    &:focus {
+      border-color: $brand-color;
+      color: $brand-color;
+
+      &::placeholder {
+        color: $brand-hover-color;
+        opacity: .65;
+      }
+    }
+  }
+}
