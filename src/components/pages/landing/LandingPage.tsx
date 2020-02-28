@@ -10,7 +10,6 @@ class LandingPage extends Component {
         <Home/>
         <Specialties/>
         <Contact/>
-        <h1>TEST</h1>
       </div>
     );
   }
