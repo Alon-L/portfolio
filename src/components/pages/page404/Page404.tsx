@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import Page404Header from '../../../assets/page404-header.svg';
-import { Link } from 'react-router-dom';
 
 class Page404 extends Component {
+  findReferrer(): string {
+    const { referrer, location: { host, protocol } } = document;
+
+    return referrer.length
+      ? referrer
+      : `${protocol}//${host}`
+  }
+
   render() {
     return (
       <div className="page">
@@ -14,9 +21,9 @@ class Page404 extends Component {
                 <Page404Header/>
                 <div className="mt-5 d-inline-block">
                   <h1>Oops! Page not found!</h1>
-                  <Link to={document.referrer} className="btn btn-brand color-white mt-3">
+                  <a href={this.findReferrer()} className="btn btn-brand color-white mt-3">
                     Return Back
-                  </Link>
+                  </a>
                 </div>
               </div>
             </Col>
