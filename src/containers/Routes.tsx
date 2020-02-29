@@ -11,6 +11,9 @@ class Routes extends Component {
           <Route exact={true} path="/" component={LandingPage}/>
 
           <Route path="/projects" component={ProjectsPage}/>
+
+          {/* TODO: Make a 404 fallback page */}
+          <Route path="/*" component={LandingPage}/>a
         </Switch>
       </main>
     );
