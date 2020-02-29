@@ -32,4 +32,7 @@ jobs:
 workflows:
     deploy:
       jobs:
-        - deploy-job
+        - deploy-job:
+            filters:
+                branches:
+                  only: master
