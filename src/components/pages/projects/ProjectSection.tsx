@@ -13,8 +13,6 @@ class ProjectSection extends Component<Props> {
   public props: Props;
 
   render() {
-    // TODO: Look at ways to improve the design of the sections
-
     const {
       title, desc, toolsUsed, background, colors: { primary },
       buttons, reverse

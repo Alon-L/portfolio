@@ -82,7 +82,8 @@ module.exports = {
       'process.env.FULL_JS_LICENSE_KEY': JSON.stringify(process.env.FULL_JS_LICENSE_KEY),
     }),
     new CopyWebpackPlugin([{
-      from: 'src/assets', to: 'assets'
+      from: 'src/assets',
+      to: 'assets'
     }]),
   ],
   devServer: {

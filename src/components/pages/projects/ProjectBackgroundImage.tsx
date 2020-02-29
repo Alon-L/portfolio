@@ -14,7 +14,11 @@ class ProjectBackgroundImage extends Component<Props> {
     return (
       <Col className="col-auto">
         <LazyLoad>
-          <img className="specialty-background-image" src={background} width={1000} alt="Background Image"/>
+          <picture>
+            <source type={'image/webp'} srcSet={`${background}.webp`}/>
+            <source type={'image/png'} srcSet={`${background}.png2`}/>
+            <img className="specialty-background-image" width={1000} src={`${background}.png2`} alt=""/>
+          </picture>
         </LazyLoad>
       </Col>
     );

@@ -6,10 +6,10 @@ export interface HomeHeroInitialState {
   primaryCol: HomeHeroCol;
 }
 
-const initialState = {
+const initialState: HomeHeroInitialState = {
   letters: [],
   primaryCol: null,
-} as HomeHeroInitialState;
+};
 
 export function hero(
   state = initialState,

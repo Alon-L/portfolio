@@ -17,7 +17,7 @@ class Routes extends Component {
           title: 'Plicked',
           desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!',
           toolsUsed: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.',
-          background: 'plicked.png',
+          background: 'plicked',
           colors: {
             primary: '#35A591',
             secondary: '#5AD3BD'
@@ -31,7 +31,7 @@ class Routes extends Component {
           title: 'Plicked #2',
           desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!',
           toolsUsed: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.',
-          background: 'plicked.png',
+          background: 'plicked',
           colors: {
             primary: '#8a39bf',
             secondary: '#b64afb'

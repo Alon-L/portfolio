@@ -23,8 +23,8 @@ class Specialties extends Component {
         rows: 2,
         columns: 4,
       },
-      background: 'frontend.jpg',
-      placeholder: 'frontend-placeholder.jpg',
+      background: 'frontend',
+      placeholder: 'frontend-placeholder',
     },
     {
       title: 'Backend',
@@ -33,8 +33,8 @@ class Specialties extends Component {
         rows: 3,
         columns: 2,
       },
-      background: 'backend.jpg',
-      placeholder: 'backend-placeholder.jpg',
+      background: 'backend',
+      placeholder: 'backend-placeholder',
     },
     {
       title: 'Desktop Software',
@@ -43,8 +43,8 @@ class Specialties extends Component {
         rows: 2,
         columns: 2,
       },
-      background: 'software.jpg',
-      placeholder: 'software-placeholder.jpg',
+      background: 'software',
+      placeholder: 'software-placeholder',
     },
     {
       title: 'Browser Extensions',
@@ -53,8 +53,8 @@ class Specialties extends Component {
         rows: 2,
         columns: 2,
       },
-      background: 'browser.jpg',
-      placeholder: 'browser-placeholder.jpg',
+      background: 'browser',
+      placeholder: 'browser-placeholder',
     },
     {
       title: 'Graphic Developments',
@@ -63,8 +63,8 @@ class Specialties extends Component {
         rows: 3,
         columns: 2,
       },
-      background: 'graphics.jpg',
-      placeholder: 'graphics-placeholder.jpg',
+      background: 'graphics',
+      placeholder: 'graphics-placeholder',
     },
     {
       title: 'Discord Bots',
@@ -73,8 +73,8 @@ class Specialties extends Component {
         rows: 2,
         columns: 4,
       },
-      background: 'discord-bots.png',
-      placeholder: 'discord-bots-placeholder.png',
+      background: 'discord-bots',
+      placeholder: 'discord-bots-placeholder',
     }
   ];
 
@@ -87,9 +87,8 @@ class Specialties extends Component {
             <div className="section-spacer">
               <h1 className="title text-center mb-5">Specialties</h1>
               <div className="specialties vh-100">
-                {this.specialties.map(({ title, path, dimensions, background, placeholder }) => (
-                  <SpecialtyBox key={title} title={title} path={path} dimensions={dimensions} 
-                    background={background} placeholder={placeholder}/>
+                {this.specialties.map((specialty) => (
+                  <SpecialtyBox key={specialty.title} specialty={specialty}/>
                 ))}
               </div>
             </div>
