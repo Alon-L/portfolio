@@ -5,6 +5,7 @@ import SpecialtiesBackground from './SpecialtiesBackground';
 
 export interface Specialty {
   title: string;
+  path: string;
   dimensions: {
     rows: number;
     columns: number;
@@ -17,6 +18,7 @@ class Specialties extends Component {
   specialties: Specialty[] = [
     {
       title: 'Frontend',
+      path: '/frontend',
       dimensions: {
         rows: 2,
         columns: 4,
@@ -26,6 +28,7 @@ class Specialties extends Component {
     },
     {
       title: 'Backend',
+      path: '/backend',
       dimensions: {
         rows: 3,
         columns: 2,
@@ -35,6 +38,7 @@ class Specialties extends Component {
     },
     {
       title: 'Desktop Software',
+      path: '/software',
       dimensions: {
         rows: 2,
         columns: 2,
@@ -44,6 +48,7 @@ class Specialties extends Component {
     },
     {
       title: 'Browser Extensions',
+      path: '/extensions',
       dimensions: {
         rows: 2,
         columns: 2,
@@ -53,6 +58,7 @@ class Specialties extends Component {
     },
     {
       title: 'Graphic Developments',
+      path: '/graphics',
       dimensions: {
         rows: 3,
         columns: 2,
@@ -62,6 +68,7 @@ class Specialties extends Component {
     },
     {
       title: 'Discord Bots',
+      path: '/bots',
       dimensions: {
         rows: 2,
         columns: 4,
@@ -80,9 +87,9 @@ class Specialties extends Component {
             <div className="section-spacer">
               <h1 className="title text-center mb-5">Specialties</h1>
               <div className="specialties vh-100">
-                {this.specialties.map(({ title, dimensions, background, placeholder }) => (
-                  <SpecialtyBox key={title} title={title} dimensions={dimensions} background={background}
-                                placeholder={placeholder}/>
+                {this.specialties.map(({ title, path, dimensions, background, placeholder }) => (
+                  <SpecialtyBox key={title} title={title} path={path} dimensions={dimensions} 
+                    background={background} placeholder={placeholder}/>
                 ))}
               </div>
             </div>
