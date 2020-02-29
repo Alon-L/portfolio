@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Col, Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import PreviewFeatured from './previews/PreviewFeatured';
 import PreviewFill from './previews/PreviewFill';
 import { StoreState } from '../../../../store/state';

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
+import { ReactFullPageTypes } from '../../../types';
 import path from 'path';
 import ProjectGoBack from './ProjectGoBack';
 import ProjectSection from './ProjectSection';
@@ -21,46 +22,25 @@ export interface Project {
   buttons?: ProjectButtons;
 }
 
+interface Props {
+  projects: Project[];
+}
+
 interface State {
   color: string;
 }
 
-class ProjectsPage extends Component<{}, State> {
-  private projects: Project[] = [
-    {
-      title: 'Plicked',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!',
-      toolsUsed: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.',
-      background: 'plicked.png',
-      colors: {
-        primary: '#35A591',
-        secondary: '#5AD3BD'
-      },
-      buttons: {
-        visit: 'https://plicked.com',
-        source: 'https://github.com'
-      }
-    },
-    {
-      title: 'Plicked #2',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!',
-      toolsUsed: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.',
-      background: 'plicked.png',
-      colors: {
-        primary: '#8a39bf',
-        secondary: '#b64afb'
-      }
-    }
-  ];
+class ProjectsPage extends Component<Props, State> {
+  public props: Props;
 
-  private colors: string[] = this.projects.map(({ colors: { primary } }) => primary);
+  private colors: string[] = this.props.projects.map(({ colors: { primary } }) => primary);
 
   public state: State = {
     color: this.colors[0],
   };
 
   render() {
-    const { color } = this.state;
+    const { props: { projects }, state: { color } } = this;
 
     return (
       <div>
@@ -70,7 +50,7 @@ class ProjectsPage extends Component<{}, State> {
           scrollingSpeed={1000}
           navigation={true}
           navigationPosition={'right'}
-          onLeave={(origin: Record<string, any>, destination: Record<string, any>) => {
+          onLeave={(origin: ReactFullPageTypes.Origin, destination: ReactFullPageTypes.Destination) => {
             this.setState({
               color: destination.item.getAttribute('data-background-color'),
             });
@@ -79,7 +59,7 @@ class ProjectsPage extends Component<{}, State> {
             return (
               <ReactFullpage.Wrapper>
                 {
-                  this.projects.map((
+                  projects.map((
                     {
                       title,
                       desc,

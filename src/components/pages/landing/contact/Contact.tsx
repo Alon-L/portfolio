@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
-import Metropolis from '../../../../assets/metropolis.svg';
+import { Container, Row } from 'react-bootstrap';
 import ContactContent from './ContactContent';
 import ContactForm from './ContactForm';
 import ContactBackground from './ContactBackground';
