@@ -10,7 +10,10 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "1c:a8:2d:61:e1:3d:e1:33:a6:56:88:72:ef:ce:6c:ae"
-      - run: ssh-keyscan $SSH_IP >> ~/.ssh/known_hosts
+      - run:
+          name: Save fingerprint
+          command: |
+            ssh-keyscan $SSH_IP >> ~/.ssh/known_hosts
       - run:
           name: Apply npm private packages keys
           command: |
@@ -23,6 +26,8 @@ jobs:
       - run:
           name: Clone into VM
           command: |
+            ssh $SSH_USER@$SSH_IP "rm -rf $SSH_STATIC_PATH || true"
+            ssh $SSH_USER@$SSH_IP "mkdir $SSH_STATIC_PATH || true"
             scp -r ./dist/* $SSH_USER@$SSH_IP:$SSH_STATIC_PATH
 workflows:
     deploy:
