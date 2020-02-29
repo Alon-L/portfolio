@@ -2,7 +2,7 @@ import { SET_WEBP_SUPPORTED, WebpSupportedActionTypes } from '../types/webpSuppo
 
 export type WebpSupportedInitialState = boolean;
 
-const initialState: WebpSupportedInitialState = false;
+const initialState: WebpSupportedInitialState = true;
 
 export function webpSupported(
   state = initialState,
