@@ -1,0 +1,28 @@
+version: 2.1
+orbs:
+  node: circleci/node@1.1.6
+jobs:
+  deploy:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      -run:
+          name: Installation
+          command: |
+            shopt -s expand_aliases
+            apt-get update
+            apt-get install sshpass
+            alias with_pass="sshpass -p \"$SSH_PASSWORD\""
+      - node/with-cache:
+          steps:
+            - run: npm install
+            - run: npm run build
+      - run:
+          name: Clone into VM
+          command: |
+            with_pass scp ./dist/* $SSH_USERNAME@$SSH_IP/$SSH_STATIC_PATH
+workflows:
+    deploy:
+      jobs:
+        - deploy
