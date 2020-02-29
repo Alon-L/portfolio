@@ -11,8 +11,8 @@ jobs:
           name: Installation
           command: |
             shopt -s expand_aliases
-            apt-get update
-            apt-get install sshpass
+            sudo apt-get update
+            sudo apt-get install sshpass
             alias with_pass="sshpass -p \"$SSH_PASSWORD\""
       - node/with-cache:
           steps:
