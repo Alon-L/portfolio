@@ -65,15 +65,24 @@ module.exports = {
       template: './public/index.html',
       filename: './index.html',
       favicon: './public/favicon.ico',
+      meta: {
+        title: 'Alon Livne',
+        description: 'Alon Livne - Fullstack Developer',
+        keywords: 'fullstack,developer,alon livne,alon,livne,frontend,backend,software engineer,discord bots,bots,alonlivne.dev',
+        robots: 'index, follow',
+        language: 'English'
+      }
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
-      chunkFilename: '[id].css'
+      chunkFilename: '[id].css',
     }),
     new webpack.DefinePlugin({
       'process.env.FULL_JS_LICENSE_KEY': JSON.stringify(process.env.FULL_JS_LICENSE_KEY),
     }),
-    new CopyWebpackPlugin([ { from: 'src/assets', to: 'assets' } ])
+    new CopyWebpackPlugin([{
+      from: 'src/assets', to: 'assets'
+    }]),
   ],
   devServer: {
     contentBase: [
@@ -81,6 +90,5 @@ module.exports = {
       path.join(__dirname, 'src/assets')
     ],
     historyApiFallback: true,
-    disableHostCheck: true // TODO: Remove this line in production
-  }
+  },
 };

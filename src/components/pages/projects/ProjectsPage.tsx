@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
+import { ReactFullPageTypes } from '../../../types';
 import path from 'path';
 import ProjectGoBack from './ProjectGoBack';
 import ProjectSection from './ProjectSection';
@@ -49,7 +50,7 @@ class ProjectsPage extends Component<Props, State> {
           scrollingSpeed={1000}
           navigation={true}
           navigationPosition={'right'}
-          onLeave={(origin: Record<string, any>, destination: Record<string, any>) => {
+          onLeave={(origin: ReactFullPageTypes.Origin, destination: ReactFullPageTypes.Destination) => {
             this.setState({
               color: destination.item.getAttribute('data-background-color'),
             });
