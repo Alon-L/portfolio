@@ -22,7 +22,7 @@ jobs:
       - run:
           name: Clone into VM
           command: |
-            scp ./dist/* $SSH_USER@$SSH_IP/$SSH_STATIC_PATH
+            scp ./dist/* $SSH_USER@$SSH_IP:/$SSH_STATIC_PATH
 workflows:
     deploy:
       jobs:
