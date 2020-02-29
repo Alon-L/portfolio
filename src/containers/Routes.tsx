@@ -13,7 +13,7 @@ class Routes extends Component {
           <Route path="/projects" component={ProjectsPage}/>
 
           {/* TODO: Make a 404 fallback page */}
-          <Route path="/*" component={LandingPage}/>a
+          <Route path="/*" component={LandingPage}/>
         </Switch>
       </main>
     );
