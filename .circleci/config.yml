@@ -2,18 +2,19 @@ version: 2.1
 orbs:
   node: circleci/node@1.1.6
 jobs:
-  deploy:
+  deploy-job:
     executor:
       name: node/default
     steps:
       - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "1c:a8:2d:61:e1:3d:e1:33:a6:56:88:72:ef:ce:6c:ae"
       - run:
-          name: Installation
+          name: Apply npm private packages keys
           command: |
-            shopt -s expand_aliases
-            sudo apt-get update
-            sudo apt-get install sshpass
-            alias with_pass="sshpass -p \"$SSH_PASSWORD\""
+            npm config set "@fortawesome:registry" https://npm.fontawesome.com/
+            npm config set "//npm.fontawesome.com/:_authToken" $FONTAWESOME_TOKEN
       - node/with-cache:
           steps:
             - run: npm install
@@ -21,8 +22,8 @@ jobs:
       - run:
           name: Clone into VM
           command: |
-            with_pass scp ./dist/* $SSH_USERNAME@$SSH_IP/$SSH_STATIC_PATH
+            scp ./dist/* $SSH_USER@$SSH_IP/$SSH_STATIC_PATH
 workflows:
     deploy:
       jobs:
-        - deploy
+        - deploy-job
