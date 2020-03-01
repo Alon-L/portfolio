@@ -68,7 +68,7 @@ stages:
           on:
             failure:
               steps:
-              - script: echo Restore from backup! This is on failure
+              - script: echo Restore from backup! Deploy failed!
             success:
               steps:
-              - script: echo Notify! This is on success
+              - script: echo Deploy succeed!
