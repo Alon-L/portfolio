@@ -18,11 +18,11 @@ stages:
     steps:
     - task: NodeTool@0
       inputs:
-        versionSpec: '10.x'
+        versionSpec: '12.x'
       displayName: 'Install Node.js'
     - script: |
         npm config set "@fortawesome:registry" https://npm.fontawesome.com/
-        npm config set "//npm.fontawesome.com/:_authToken" $FONTAWESOME_TOKEN
+        npm config set "//npm.fontawesome.com/:_authToken" $(FontAwesome_Token)
       displayName: 'Apply npm private packages keys'
     - script: |
         npm install
