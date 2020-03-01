@@ -31,15 +31,12 @@ stages:
         npm install
         npm run build --if-present
       displayName: 'npm install and build'
-    - task: ArchiveFiles@2
-      displayName: 'Archive files'
+    - task: CopyFiles@2
       inputs:
-        rootFolderOrFile: '$(System.DefaultWorkingDirectory)/dist'
-        includeRootFolder: false
-        archiveType: zip
-        archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
-        replaceExistingArchive: true
-    - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+        SourceFolder: '$(System.DefaultWorkingDirectory)/dist'
+        Contents: '**'
+        TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    - upload: $(Build.ArtifactStagingDirectory)
       artifact: drop
 - stage: deploy
   displayName: Deploy
@@ -70,7 +67,7 @@ stages:
                   ls
                   cd ../
                   echo CD back
-                  cp -r $(Pipeline.Workspace)/* $(sshStaticPath)
+                  cp -r $(Pipeline.Workspace)/drop/* $(sshStaticPath)
           on:
             failure:
               steps:
