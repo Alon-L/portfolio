@@ -9,6 +9,9 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+variables:
+- group: 'Portfolio Variables'
+
 stages:
 - stage: Build
   displayName: Build stage
