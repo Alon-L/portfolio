@@ -29,6 +29,8 @@ class ProjectSectionButton extends Component<Props, State> {
           onMouseEnter={() => this.setState({ buttonHover: true })}
           onMouseLeave={() => this.setState({ buttonHover: false })}
           style={buttonHover ? hoverStyles : null}
+          target={'_blank'}
+          rel={'noopener noreferrer'}
         >{text}</a>
       </Col>
     ) : null
