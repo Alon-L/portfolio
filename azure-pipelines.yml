@@ -65,7 +65,12 @@ stages:
                 script: |
                   rm -rf $(sshStaticPath) || true
                   mkdir $(sshStaticPath) || true
-                  cp $(Pipeline.Workspace) $(sshStaticPath)
+                  echo CD into $(Pipeline.Workspace)
+                  cd $(Pipeline.Workspace)
+                  ls
+                  cd ../
+                  echo CD back
+                  cp -r $(Pipeline.Workspace)/* $(sshStaticPath)
           on:
             failure:
               steps:
