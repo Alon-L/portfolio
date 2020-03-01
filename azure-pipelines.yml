@@ -25,7 +25,7 @@ stages:
       displayName: 'Install Node.js'
     - script: |
         npm config set "@fortawesome:registry" https://npm.fontawesome.com/
-        npm config set "//npm.fontawesome.com/:_authToken" $(FontAwesome_Token)
+        npm config set "//npm.fontawesome.com/:_authToken" $(fontAwesomeToken)
       displayName: 'Apply npm private packages keys'
     - script: |
         npm install
@@ -41,18 +41,35 @@ stages:
         replaceExistingArchive: true
     - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
       artifact: drop
-#- stage: deploy
-#  displayName: Deploy
-#  jobs:
-#  - deployment: VMDeploy
-#    displayName: web
-#    pool:
-#      vmImage: 'Ubuntu-18.04'
-#    environment:
-#      name: 'portfolio-env'
-#      resourceType: VirtualMachine
-#    strategy:
-#      runOnce:
-#        deploy:
-#          steps:
-#          - script: echo my first deployment
+- stage: deploy
+  displayName: Deploy
+  jobs: 
+  - deployment: VMDeploy
+    displayName: web
+    environment:
+      name: 'portfolio-env'
+      resourceType: VirtualMachine
+    strategy:
+        rolling:
+          maxParallel: 5  #for percentages, mention as x%
+          preDeploy:
+            steps:
+            - download: current
+              artifact: drop
+            - script: echo initialize, cleanup, backup, install certs
+          deploy:
+            steps:
+            - task: Bash@3
+              inputs:
+                targetType: 'inline'
+                script: |
+                  rm -rf $(sshStaticPath) || true
+                  mkdir $(sshStaticPath) || true
+                  cp $(Pipeline.Workspace) $(sshStaticPath)
+          on:
+            failure:
+              steps:
+              - script: echo Restore from backup! This is on failure
+            success:
+              steps:
+              - script: echo Notify! This is on success
