@@ -38,11 +38,11 @@ stages:
         TargetFolder: '$(Build.ArtifactStagingDirectory)'
     - upload: $(Build.ArtifactStagingDirectory)
       artifact: drop
-- stage: deploy
-  displayName: Deploy
+- stage: Deploy
+  displayName: Deploy Stage
   jobs: 
   - deployment: VMDeploy
-    displayName: web
+    displayName: Deploy into VM
     environment:
       name: 'portfolio-env'
       resourceType: VirtualMachine
@@ -62,12 +62,8 @@ stages:
                 script: |
                   rm -rf $(sshStaticPath) || true
                   mkdir $(sshStaticPath) || true
-                  echo CD into $(Pipeline.Workspace)
-                  cd $(Pipeline.Workspace)
-                  ls
-                  cd ../
-                  echo CD back
                   cp -r $(Pipeline.Workspace)/drop/* $(sshStaticPath)
+                  rm -rf $(Pipeline.Workspace) || true
           on:
             failure:
               steps:
