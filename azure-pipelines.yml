@@ -1,0 +1,55 @@
+# Node.js
+# Build a general Node.js project with npm.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+stages:
+- stage: Build
+  displayName: Build stage
+  jobs:  
+  - job: Build
+    displayName: Build
+    steps:
+    - task: NodeTool@0
+      inputs:
+        versionSpec: '10.x'
+      displayName: 'Install Node.js'
+    - script: |
+        npm config set "@fortawesome:registry" https://npm.fontawesome.com/
+        npm config set "//npm.fontawesome.com/:_authToken" $FONTAWESOME_TOKEN
+      displayName: 'Apply npm private packages keys'
+    - script: |
+        npm install
+        npm run build --if-present
+      displayName: 'npm install and build'
+    - task: ArchiveFiles@2
+      displayName: 'Archive files'
+      inputs:
+        rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
+        includeRootFolder: false
+        archiveType: zip
+        archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+        replaceExistingArchive: true
+    - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+      artifact: drop
+#- stage: deploy
+#  displayName: Deploy
+#  jobs:
+#  - deployment: VMDeploy
+#    displayName: web
+#    pool:
+#      vmImage: 'Ubuntu-18.04'
+#    environment:
+#      name: 'portfolio-env'
+#      resourceType: VirtualMachine
+#    strategy:
+#      runOnce:
+#        deploy:
+#          steps:
+#          - script: echo my first deployment
