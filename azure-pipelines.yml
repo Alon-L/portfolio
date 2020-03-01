@@ -63,6 +63,7 @@ stages:
                   rm -rf $(sshStaticPath) || true
                   mkdir $(sshStaticPath) || true
                   cp -r $(Pipeline.Workspace)/drop/* $(sshStaticPath)
+                  echo Pipeline workspace path: $(Pipeline.Workspace)
                   rm -rf $(Pipeline.Workspace) || true
           on:
             failure:
