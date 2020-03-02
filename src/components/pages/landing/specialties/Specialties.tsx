@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import SpecialtyBox from './SpecialtyBox';
 import SpecialtiesBackground from './SpecialtiesBackground';
+import specialties from '../../../../internals/config/specialties.json';
 
 export interface Specialty {
   title: string;
@@ -15,68 +16,7 @@ export interface Specialty {
 }
 
 class Specialties extends Component {
-  specialties: Specialty[] = [
-    {
-      title: 'Frontend',
-      path: '/frontend',
-      dimensions: {
-        rows: 2,
-        columns: 4,
-      },
-      background: 'frontend.jpg',
-      placeholder: 'frontend-placeholder.jpg',
-    },
-    {
-      title: 'Backend',
-      path: '/backend',
-      dimensions: {
-        rows: 3,
-        columns: 2,
-      },
-      background: 'backend.jpg',
-      placeholder: 'backend-placeholder.jpg',
-    },
-    {
-      title: 'Desktop Software',
-      path: '/software',
-      dimensions: {
-        rows: 2,
-        columns: 2,
-      },
-      background: 'software.jpg',
-      placeholder: 'software-placeholder.jpg',
-    },
-    {
-      title: 'Browser Extensions',
-      path: '/extensions',
-      dimensions: {
-        rows: 2,
-        columns: 2,
-      },
-      background: 'browser.jpg',
-      placeholder: 'browser-placeholder.jpg',
-    },
-    {
-      title: 'Other',
-      path: '/other',
-      dimensions: {
-        rows: 3,
-        columns: 2,
-      },
-      background: 'other.jpg',
-      placeholder: 'other-placeholder.jpg',
-    },
-    {
-      title: 'Discord Bots',
-      path: '/bots',
-      dimensions: {
-        rows: 2,
-        columns: 4,
-      },
-      background: 'discord-bots.png',
-      placeholder: 'discord-bots-placeholder.png',
-    }
-  ];
+  specialties: Specialty[] = specialties;
 
   render() {
     return (
