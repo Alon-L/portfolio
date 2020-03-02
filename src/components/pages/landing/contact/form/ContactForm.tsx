@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Col, Form, FormControl, FormGroup, FormLabel } from 'react-bootstrap';
+import { Col, Form, FormGroup } from 'react-bootstrap';
 import ContactFormInput from './ContactFormInput';
 
 export interface FormInput {
