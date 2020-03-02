@@ -57,14 +57,14 @@ class Specialties extends Component {
       placeholder: 'browser-placeholder.jpg',
     },
     {
-      title: 'Graphic Developments',
-      path: '/graphics',
+      title: 'Other',
+      path: '/other',
       dimensions: {
         rows: 3,
         columns: 2,
       },
-      background: 'graphics.jpg',
-      placeholder: 'graphics-placeholder.jpg',
+      background: 'other.jpg',
+      placeholder: 'other-placeholder.jpg',
     },
     {
       title: 'Discord Bots',
