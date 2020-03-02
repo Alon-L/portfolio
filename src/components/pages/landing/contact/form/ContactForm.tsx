@@ -38,9 +38,9 @@ class ContactForm extends Component {
                 <ContactFormInput key={labelText} labelText={labelText} placeholder={placeholder} type={type} textarea={textarea}/>
               ))
             }
-            <div className="btn btn-primary btn-brand w-100 p-3">
+            <button type="submit" className="btn btn-primary btn-brand w-100 p-3">
               Submit Message
-            </div>
+            </button>
           </FormGroup>
         </Form>
       </Col>
