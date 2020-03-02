@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import ContactContent from './ContactContent';
-import ContactForm from './ContactForm';
+import ContactForm from './form/ContactForm';
 import ContactBackground from './ContactBackground';
 
 class Contact extends Component {
