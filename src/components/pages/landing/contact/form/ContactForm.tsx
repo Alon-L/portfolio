@@ -1,43 +1,97 @@
-import React, { Component } from 'react';
+import React, { ChangeEvent, Component, FormEvent } from 'react';
+import emailjs from 'emailjs-com';
 import { Col, Form, FormGroup } from 'react-bootstrap';
 import ContactFormInput from './ContactFormInput';
+import ContactFormStatus from './ContactFormStatus';
 
 export interface FormInput {
   labelText: string;
+  name: string;
   placeholder: string;
-  type?: string;
-  textarea?: boolean;
+  type: string;
+  onChange?: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 }
 
-class ContactForm extends Component {
-  formInputs: FormInput[] = [
+export interface Status {
+  status: number;
+}
+
+interface State extends Status {
+  inputs: Record<string, string>;
+}
+
+class ContactForm extends Component<{}, State> {
+  private formInputs: FormInput[] = [
     {
       labelText: 'Full Name',
-      type: 'text',
+      name: 'fullName',
       placeholder: 'John Doe',
+      type: 'text',
     },
     {
       labelText: 'Email',
-      type: 'email',
+      name: 'email',
       placeholder: 'your@email.com',
+      type: 'email',
     },
     {
       labelText: 'Message',
+      name: 'message',
       placeholder: 'Your message...',
-      textarea: true,
+      type: 'textarea'
     }
   ];
 
+  public state: State = {
+    inputs: this.formInputs.reduce((inputs, formInput) => (
+      { ...inputs, [formInput.name]: '' }
+    ), {}),
+    status: null,
+  };
+
+  private handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
+    const { target: { name, value } } = e;
+
+    this.setState({
+      inputs: {
+        ...this.state.inputs,
+        [name]: value
+      }
+    });
+  };
+
+  private handleFormSubmit = async (e: FormEvent): Promise<void> => {
+    e.preventDefault();
+
+    this.setState({
+      status: 1,
+    });
+
+    const {
+      EMAIL_JS_SERVICE_ID: serviceId,
+      EMAIL_JS_TEMPLATE_ID: templateId,
+      EMAIL_JS_USER_ID: userId
+    } = process.env;
+
+    const { status } = await emailjs.send(serviceId, templateId, this.state.inputs, userId);
+    this.setState({
+      status
+    });
+  };
+
   render() {
+    const { state: { status }, handleFormSubmit, handleInputChange } = this;
+
     return (
       <Col md={5} className="contact-form">
-        <Form>
+        <Form onSubmit={handleFormSubmit}>
           <FormGroup>
             {
-              this.formInputs.map(({ labelText, placeholder, type, textarea } ) => (
-                <ContactFormInput key={labelText} labelText={labelText} placeholder={placeholder} type={type} textarea={textarea}/>
+              this.formInputs.map(contactForm => (
+                <ContactFormInput key={contactForm.labelText} {...contactForm} onChange={handleInputChange}/>
               ))
             }
+            <ContactFormStatus status={status}/>
             <button type="submit" className="btn btn-primary btn-brand w-100 p-3">
               Submit Message
             </button>

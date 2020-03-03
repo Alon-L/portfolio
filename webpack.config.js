@@ -79,7 +79,12 @@ module.exports = {
       chunkFilename: '[id].css',
     }),
     new webpack.DefinePlugin({
-      'process.env.FULL_JS_LICENSE_KEY': JSON.stringify(process.env.FULL_JS_LICENSE_KEY),
+      'process.env': {
+        'FULL_JS_LICENSE_KEY': JSON.stringify(process.env.FULL_JS_LICENSE_KEY),
+        'EMAIL_JS_SERVICE_ID': JSON.stringify(process.env.EMAIL_JS_SERVICE_ID),
+        'EMAIL_JS_TEMPLATE_ID': JSON.stringify(process.env.EMAIL_JS_TEMPLATE_ID),
+        'EMAIL_JS_USER_ID': JSON.stringify(process.env.EMAIL_JS_USER_ID),
+      },
     }),
     new CopyWebpackPlugin([{
       from: 'src/assets', to: 'assets'

@@ -8,15 +8,15 @@ class ContactFormInput extends Component<Props> {
   public props: Props;
 
   render() {
-    const { labelText, placeholder, type, textarea } = this.props;
+    const { labelText, name, placeholder, type, onChange } = this.props;
 
     return (
       <FormLabel>
         {labelText}
-        { textarea ? (
-          <textarea className="form-control textarea-resize-disable" placeholder={placeholder}/>
+        { type === 'textarea' ? (
+          <textarea required className="form-control textarea-resize-disable" name={name} placeholder={placeholder} onChange={onChange}/>
         ) : (
-          <FormControl type={type} placeholder={placeholder}/>
+          <FormControl required type={type} name={name} placeholder={placeholder} onChange={onChange}/>
         ) }
       </FormLabel>
     );
