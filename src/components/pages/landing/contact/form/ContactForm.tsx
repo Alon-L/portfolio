@@ -73,6 +73,8 @@ class ContactForm extends Component<{}, State> {
       EMAIL_JS_USER_ID: userId
     } = process.env;
 
+    console.log(serviceId, templateId, this.state.inputs, userId);
+
     let statusCode;
     try {
       const status = await emailjs.send(serviceId, templateId, this.state.inputs, userId);
