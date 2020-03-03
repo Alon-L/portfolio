@@ -1,5 +1,5 @@
 {
-  "name": "react-typescript-boiler",
+  "name": "portfolio",
   "version": "0.1.0",
   "homepage": "https://github.com/DayColor/portfolio",
   "dependencies": {
@@ -38,8 +38,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
-    "build": "webpack --mode production",
-    "deploy": "gh-pages -d dist"
+    "build": "webpack --mode production"
   },
   "eslintConfig": {
     "extends": "react-app"
