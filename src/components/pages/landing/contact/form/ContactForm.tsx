@@ -67,6 +67,8 @@ class ContactForm extends Component<{}, State> {
       status: 1,
     });
 
+    console.log(process.env);
+
     const {
       EMAIL_JS_SERVICE_ID: serviceId,
       EMAIL_JS_TEMPLATE_ID: templateId,
