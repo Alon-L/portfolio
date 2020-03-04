@@ -21,7 +21,7 @@ class HomeContentSocials extends Component {
     },
     {
       icon: faEnvelope,
-      href: 'mailto:2005alonlivne@gmail.com'
+      href: 'mailto:inquiries@alonlivne.dev'
     }
   ];
 
