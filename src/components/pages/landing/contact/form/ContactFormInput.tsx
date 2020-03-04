@@ -12,7 +12,7 @@ class ContactFormInput extends Component<Props> {
 
     return (
       <FormLabel>
-        {labelText}
+        <span>{labelText}</span>
         { type === 'textarea' ? (
           <textarea required className="form-control textarea-resize-disable" name={name} placeholder={placeholder} onChange={onChange}/>
         ) : (

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/pro-solid-svg-icons';
@@ -16,7 +16,7 @@ class ProjectGoBack extends Component<Props> {
     return (
       <div className="go-back priority-high">
         <div className="position-relative vw-100">
-          <Link to="/" className="color-black position-absolute arrow">
+          <Link aria-label="Go back" to="/" className="color-black d-inline-block position-absolute arrow">
             <FontAwesomeIcon className="arrow-icon" color={color} icon={faArrowLeft} size={'2x'}/>
           </Link>
         </div>

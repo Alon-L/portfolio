@@ -19,7 +19,7 @@ class ProjectSectionButtons extends Component<Props> {
     };
 
     return buttons ? (
-      <Row className="buttons mt-lg-5 mt-3">
+      <Row className="buttons mt-3 mt-lg-5">
         <ProjectSectionButton show={!!buttons.visit} color="white" text="Visit Project" url={buttons.visit}
           hoverStyles={buttonHoverStyle}/>
         <ProjectSectionButton show={!!buttons.source} color="black" text="View Source" url={buttons.source}

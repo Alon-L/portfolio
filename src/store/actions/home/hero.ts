@@ -1,7 +1,7 @@
 import { Dispatch } from 'redux';
 import {
   HomeActionTypes,
-  ADD_LETTER, SET_COL
+  ADD_LETTER, SET_COL, RESET_LETTERS
 } from '../../types/home/hero';
 import { HomeHeroCol, Letter } from '../../types';
 
@@ -13,6 +13,14 @@ export const addLetter = (letter: Letter): dispatchCurrying => (
   return dispatch({
     type: ADD_LETTER,
     payload: letter,
+  });
+};
+
+export const resetLetters = (): dispatchCurrying => (
+  dispatch: Dispatch
+): HomeActionTypes => {
+  return dispatch({
+    type: RESET_LETTERS,
   });
 };
 

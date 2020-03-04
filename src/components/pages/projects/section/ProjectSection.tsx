@@ -1,9 +1,20 @@
 import React, { Component } from 'react';
 import { Col, Row } from 'react-bootstrap';
-import ProjectBackgroundImage from './ProjectBackgroundImage';
-import ProjectBackgroundBlobs from './ProjectBackgroundBlobs';
-import ProjectSectionButtons from './buttons/ProjectSectionButtons';
-import { Project } from './ProjectsPage';
+import ProjectBackgroundImage from '../ProjectBackgroundImage';
+import ProjectBackgroundBlobs from '../ProjectBackgroundBlobs';
+import ProjectSectionButtons from '../buttons/ProjectSectionButtons';
+import { Project } from '../ProjectsPage';
+import ProjectSectionHeader from './ProjectSectionHeader';
+import ProjectSectionTools from './ProjectSectionTools';
+
+export interface SectionHeader {
+  title: string;
+  desc: string;
+}
+
+export interface SectionTools {
+  toolsUsed: string;
+}
 
 interface Props extends Project {
   reverse: boolean;
@@ -26,14 +37,8 @@ class ProjectSection extends Component<Props> {
             <ProjectBackgroundImage background={background}/>
             <Col lg={4} className="col-md-auto">
               <Col className="color-white">
-                <div className="mb-5">
-                  <h1 className="title display-4">{title}</h1>
-                  <p>{desc}</p>
-                </div>
-                <div>
-                  <h1 className="title display-5">Tools Used</h1>
-                  <p>{toolsUsed}</p>
-                </div>
+                <ProjectSectionHeader title={title} desc={desc}/>
+                <ProjectSectionTools toolsUsed={toolsUsed}/>
                 <ProjectSectionButtons color={primary} buttons={buttons}/>
               </Col>
             </Col>

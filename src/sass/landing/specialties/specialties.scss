@@ -30,6 +30,7 @@
       grid-column: span 3 !important;
     }
 
+    &:focus-within,
     &:hover {
       background-color: initial;
 

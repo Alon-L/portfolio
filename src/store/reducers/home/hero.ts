@@ -1,4 +1,4 @@
-import { ADD_LETTER, HomeActionTypes, SET_COL } from '../../types/home/hero';
+import { ADD_LETTER, HomeActionTypes, RESET_LETTERS, SET_COL } from '../../types/home/hero';
 import { HomeHeroCol, Letters } from '../../types';
 
 export interface HomeHeroInitialState {
@@ -19,8 +19,11 @@ export function hero(
     case ADD_LETTER:
       return {
         ...state,
-        letters: [...state.letters, action.payload]
+        letters: [...state.letters, action.payload],
       };
+    case RESET_LETTERS:
+      state.letters.length = 0;
+      return state;
     case SET_COL:
       return {
         ...state,
