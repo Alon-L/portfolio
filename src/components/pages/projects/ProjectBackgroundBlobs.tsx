@@ -15,7 +15,7 @@ class ProjectBackgroundBlobs extends Component<Props> {
     };
 
     return (
-      <div className="specialty-background-blobs">
+      <div className="project-background-blobs">
         <div className="blob circle" style={blobStyle}/>
         <div className="blob square" style={blobStyle}/>
       </div>

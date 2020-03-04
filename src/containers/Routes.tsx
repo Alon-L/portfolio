@@ -5,7 +5,7 @@ import ProjectsPage, { Project } from '../components/pages/projects/ProjectsPage
 import Page404 from '../components/pages/page404/Page404';
 import specialties from '../internals/config/specialties.json';
 
-interface ProjectsRoute {
+export interface ProjectsRoute {
   projects: Project[];
   path: string;
 }
@@ -21,7 +21,7 @@ class Routes extends Component {
 
           {this.projectsRoutes.map(({ projects, path }) => (
             <Route key={path} path={path} component={() => (
-              <ProjectsPage projects={projects}/>
+              <ProjectsPage projects={projects} path={path}/>
             )}/>
           ))}
 

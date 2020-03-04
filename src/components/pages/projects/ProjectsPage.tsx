@@ -4,6 +4,7 @@ import { ReactFullPageTypes } from '../../../types';
 import path from 'path';
 import ProjectGoBack from './ProjectGoBack';
 import ProjectSection from './ProjectSection';
+import { ProjectsRoute } from '../../../containers/Routes';
 
 export interface ProjectButtons {
   visit?: string;
@@ -22,9 +23,7 @@ export interface Project {
   buttons?: ProjectButtons;
 }
 
-interface Props {
-  projects: Project[];
-}
+type Props = ProjectsRoute;
 
 interface State {
   color: string;
@@ -40,7 +39,7 @@ class ProjectsPage extends Component<Props, State> {
   };
 
   render() {
-    const { props: { projects }, state: { color } } = this;
+    const { props: { projects, path: backgroundFolder }, state: { color } } = this;
 
     return (
       <div>
@@ -69,7 +68,7 @@ class ProjectsPage extends Component<Props, State> {
                       buttons
                     }, i
                   ) => {
-                    const backgroundPath = path.join('../assets/specialties/pages/frontend/', background);
+                    const backgroundPath = path.join('../assets/specialties/pages/', backgroundFolder, background);
                     const sectionStyle: React.CSSProperties = {
                       backgroundImage: `linear-gradient(to bottom right, ${primary}, ${secondary})`
                     };

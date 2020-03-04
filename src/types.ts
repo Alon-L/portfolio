@@ -6,4 +6,3 @@ export namespace ReactFullPageTypes {
     item: HTMLDivElement;
   }
 }
-
