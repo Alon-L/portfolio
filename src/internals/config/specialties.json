@@ -10,27 +10,43 @@
     "placeholder": "frontend-placeholder.jpg",
     "projects": [
       {
-        "title": "Plicked",
+        "title": "Plicked - SMM",
         "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
         "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
-        "background": "plicked.png",
+        "background": "plicked-smm.png",
         "colors": {
           "primary": "#35A591",
           "secondary": "#5AD3BD"
         },
         "buttons": {
-          "visit": "https://plicked.com",
-          "source": "https://github.com"
+          "visit": "https://plicked.com"
         }
       },
       {
-        "title": "Plicked #2",
+        "title": "WumpCraft Website",
         "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
         "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
-        "background": "plicked.png",
+        "background": "wumpcraft-website.png",
         "colors": {
-          "primary": "#8a39bf",
-          "secondary": "#b64afb"
+          "primary": "#869DEE",
+          "secondary": "#AABFF2"
+        },
+        "buttons": {
+          "visit": "https://wumpcraft.xyz/",
+          "source": "https://github.com/DayColor/wumpcraft-website"
+        }
+      },
+      {
+        "title": "Plicked - Instagram Growth",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
+        "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
+        "background": "plicked-instagram-growth.png",
+        "colors": {
+          "primary": "#5c5adb",
+          "secondary": "#4745c4"
+        },
+        "buttons": {
+          "visit": "https://plicked.com"
         }
       }
     ]
@@ -46,13 +62,13 @@
     "placeholder": "backend-placeholder.jpg",
     "projects": [
       {
-        "title": "Plicked",
+        "title": "Proxies Creator",
         "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
         "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
-        "background": "plicked.png",
+        "background": "proxies-creator.png",
         "colors": {
-          "primary": "#aaa",
-          "secondary": "#5AD3BD"
+          "primary": "#c75050",
+          "secondary": "#d96262"
         },
         "buttons": {
           "visit": "https://plicked.com",
@@ -60,35 +76,53 @@
         }
       },
       {
-        "title": "Plicked #2",
+        "title": "Proxy Tester",
         "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
         "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
-        "background": "plicked.png",
+        "background": "proxy-tester.png",
         "colors": {
-          "primary": "#aaa",
-          "secondary": "#b64afb"
+          "primary": "#73d4eb",
+          "secondary": "#62c3d9"
+        },
+        "buttons": {
+          "visit": "https://plicked.com",
+          "source": "https://github.com"
+        }
+      },
+      {
+        "title": "Twitter Monitor",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
+        "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
+        "background": "twitter-monitor.png",
+        "colors": {
+          "primary": "#ba30a8",
+          "secondary": "#a62695"
+        },
+        "buttons": {
+          "visit": "https://plicked.com",
+          "source": "https://github.com"
         }
       }
     ]
   },
   {
-    "title": "Desktop Software",
-    "path": "/software",
+    "title": "Problem Solving",
+    "path": "/solving",
     "dimensions": {
       "rows": 2,
-      "columns": 2
+      "columns": 4
     },
-    "background": "software.jpg",
-    "placeholder": "software-placeholder.jpg",
+    "background": "solving.jpg",
+    "placeholder": "solving-placeholder.jpg",
     "projects": [
       {
-        "title": "Plicked",
+        "title": "JSON Documentation Generator",
         "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
         "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
-        "background": "plicked.png",
+        "background": "json-documentation-generator.png",
         "colors": {
-          "primary": "#bbb",
-          "secondary": "#5AD3BD"
+          "primary": "#db2a2a",
+          "secondary": "#bf1515"
         },
         "buttons": {
           "visit": "https://plicked.com",
@@ -96,35 +130,13 @@
         }
       },
       {
-        "title": "Plicked #2",
+        "title": "Currency Converter",
         "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
         "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
-        "background": "plicked.png",
+        "background": "currency-converter-extension.png",
         "colors": {
-          "primary": "#bbb",
-          "secondary": "#b64afb"
-        }
-      }
-    ]
-  },
-  {
-    "title": "Browser Extensions",
-    "path": "/extensions",
-    "dimensions": {
-      "rows": 2,
-      "columns": 2
-    },
-    "background": "browser.jpg",
-    "placeholder": "browser-placeholder.jpg",
-    "projects": [
-      {
-        "title": "Plicked",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
-        "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
-        "background": "plicked.png",
-        "colors": {
-          "primary": "#ccc",
-          "secondary": "#5AD3BD"
+          "primary": "#22e3a3",
+          "secondary": "#15bf87"
         },
         "buttons": {
           "visit": "https://plicked.com",
@@ -132,13 +144,31 @@
         }
       },
       {
-        "title": "Plicked #2",
+        "title": "TypeRacer Practice Extension",
         "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
         "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
-        "background": "plicked.png",
+        "background": "typeracer-practice-extension.png",
         "colors": {
-          "primary": "#ccc",
-          "secondary": "#b64afb"
+          "primary": "#6538eb",
+          "secondary": "#562adb"
+        },
+        "buttons": {
+          "visit": "https://plicked.com",
+          "source": "https://github.com"
+        }
+      },
+      {
+        "title": "CSS Variables Remover",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
+        "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
+        "background": "css-variables-remover.png",
+        "colors": {
+          "primary": "#c42346",
+          "secondary": "#db3257"
+        },
+        "buttons": {
+          "visit": "https://plicked.com",
+          "source": "https://github.com"
         }
       }
     ]
@@ -154,13 +184,13 @@
     "placeholder": "other-placeholder.jpg",
     "projects": [
       {
-        "title": "Plicked",
+        "title": "ASCII Art Video",
         "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
         "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
-        "background": "plicked.png",
+        "background": "ascii-art-video.png",
         "colors": {
-          "primary": "#ddd",
-          "secondary": "#5AD3BD"
+          "primary": "#54c3eb",
+          "secondary": "#42a6c9"
         },
         "buttons": {
           "visit": "https://plicked.com",
@@ -168,13 +198,31 @@
         }
       },
       {
-        "title": "Plicked #2",
+        "title": "SMS Notifier Bot",
         "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
         "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
-        "background": "plicked.png",
+        "background": "sms-discord-bot.png",
         "colors": {
-          "primary": "#ddd",
-          "secondary": "#b64afb"
+          "primary": "#7752de",
+          "secondary": "#5a3ab5"
+        },
+        "buttons": {
+          "visit": "https://plicked.com",
+          "source": "https://github.com"
+        }
+      },
+      {
+        "title": "ASCII Art Images",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
+        "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
+        "background": "ascii-art-images.png",
+        "colors": {
+          "primary": "#52de8c",
+          "secondary": "#42c97a"
+        },
+        "buttons": {
+          "visit": "https://plicked.com",
+          "source": "https://github.com"
         }
       }
     ]
@@ -190,13 +238,13 @@
     "placeholder": "discord-bots-placeholder.png",
     "projects": [
       {
-        "title": "Plicked",
+        "title": "WumpCraft",
         "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
         "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
-        "background": "plicked.png",
+        "background": "wumpcraft-bot.png",
         "colors": {
-          "primary": "#eee",
-          "secondary": "#5AD3BD"
+          "primary": "#869DEE",
+          "secondary": "#AABFF2"
         },
         "buttons": {
           "visit": "https://plicked.com",
@@ -204,13 +252,45 @@
         }
       },
       {
-        "title": "Plicked #2",
+        "title": "TypeRacer Bot",
         "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
         "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
-        "background": "plicked.png",
+        "background": "typeracer-bot.png",
         "colors": {
-          "primary": "#eee",
-          "secondary": "#b64afb"
+          "primary": "#2630bf",
+          "secondary": "#3742db"
+        },
+        "buttons": {
+          "visit": "https://plicked.com",
+          "source": "https://github.com"
+        }
+      },
+      {
+        "title": "CV Bot",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
+        "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
+        "background": "cv-bot.png",
+        "colors": {
+          "primary": "#37db8e",
+          "secondary": "#2bbd78"
+        },
+        "buttons": {
+          "visit": "https://plicked.com",
+          "source": "https://github.com"
+        }
+      },
+      {
+        "title": "Calvin Bot",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
+        "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
+        "background": "calvin.png",
+        "colors": {
+          "primary": "#3bb4db",
+          "secondary": "#2b99bd"
+        },
+        "buttons": {
+          "visit": "https://plicked.com",
+          "source": "https://github.com"
         }
       }
     ]

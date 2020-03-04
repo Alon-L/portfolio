@@ -67,15 +67,11 @@ class ContactForm extends Component<{}, State> {
       status: 1,
     });
 
-    console.log(process.env);
-
     const {
       EMAIL_JS_SERVICE_ID: serviceId,
       EMAIL_JS_TEMPLATE_ID: templateId,
       EMAIL_JS_USER_ID: userId
     } = process.env;
-
-    console.log(serviceId, templateId, this.state.inputs, userId);
 
     let statusCode;
     try {

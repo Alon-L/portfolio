@@ -1,3 +1,4 @@
+$go-back-dimensions: 100px;
 $circle-dimensions: 550px;
 $square-dimensions: 825px;
 $square-border-radius: 130px;
@@ -6,16 +7,15 @@ $square-border-radius: 130px;
   position: fixed;
   top: 0;
   left: 0;
-
-  width: 0;
-  height: 0;
+  width: $go-back-dimensions;
+  height: $go-back-dimensions;
   border-style: solid;
-  border-width: 130px 130px 0 0;
+  border-width: $go-back-dimensions $go-back-dimensions 0 0;
   border-color: #ffffff transparent transparent transparent;
 
   .arrow {
-    left: 20px;
-    top: -110px;
+    left: 15px;
+    top: -90px;
 
     &:hover {
       .arrow-icon {
@@ -28,7 +28,7 @@ $square-border-radius: 130px;
     }
   }
 
-  @media screen and (max-height: 730px) {
+  @media screen and (max-height: 730px), (max-width: 400px) {
     border-color: transparent;
 
     .arrow {
@@ -42,7 +42,7 @@ $square-border-radius: 130px;
   }
 }
 
-.specialty-background-blobs {
+.project-background-blobs {
   .blob {
     position: absolute;
   }
@@ -65,9 +65,14 @@ $square-border-radius: 130px;
   }
 }
 
-.specialty-background-image {
-  border-radius: 15px;
-  box-shadow: 10px 10px 25px 0 rgba(0, 0, 0, .35);
+.project-background {
+  width: 1000px;
+
+  &-image {
+    border-radius: 15px;
+    box-shadow: 10px 10px 25px 0 rgba(0, 0, 0, .35);
+    width: 100%;
+  }
 
   @include media('<1520px') {
     width: 800px;
@@ -79,5 +84,13 @@ $square-border-radius: 130px;
 
   @include media('<600px') {
     display: none;
+  }
+}
+
+.project {
+  .title {
+    @include media('<tablet') {
+      font-size: 2rem;
+    }
   }
 }

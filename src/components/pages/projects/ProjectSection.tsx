@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import ProjectBackgroundImage from './ProjectBackgroundImage';
 import ProjectBackgroundBlobs from './ProjectBackgroundBlobs';
-import { Project } from './ProjectsPage';
 import ProjectSectionButtons from './buttons/ProjectSectionButtons';
+import { Project } from './ProjectsPage';
 
 interface Props extends Project {
   reverse: boolean;
@@ -13,15 +13,14 @@ class ProjectSection extends Component<Props> {
   public props: Props;
 
   render() {
-    // TODO: Look at ways to improve the design of the sections
-
     const {
       title, desc, toolsUsed, background, colors: { primary },
       buttons, reverse
     } = this.props;
+
     return (
-      <section>
-        <div className="h-100 position-relative d-flex align-items-center">
+      <section className="project">
+        <div className="h-100 d-flex align-items-center">
           <ProjectBackgroundBlobs color={primary}/>
           <Row className={`justify-content-center ${reverse ? 'flex-row-reverse' : 'flex-row'}`}>
             <ProjectBackgroundImage background={background}/>

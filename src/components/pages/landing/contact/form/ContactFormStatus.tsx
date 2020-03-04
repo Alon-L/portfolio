@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSpinnerThird, faTimesCircle, faCheckCircle } from '@fortawesome/pro-light-svg-icons';
+import { faSpinnerThird, faTimesCircle, faCheckCircle } from '@fortawesome/pro-regular-svg-icons';
 import { Status } from './ContactForm';
 
 type Props = Status;
