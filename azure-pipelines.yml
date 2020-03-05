@@ -20,11 +20,10 @@ stages:
   jobs:
   - job: Build
     displayName: Build
+    environment:
+      name: 'portfolio-env'
+      resourceType: VirtualMachine
     steps:
-    - task: NodeTool@0
-      inputs:
-        versionSpec: '12.x'
-      displayName: 'Install Node.js'
     - script: |
         npm config set "@fortawesome:registry" https://npm.fontawesome.com/
         npm config set "//npm.fontawesome.com/:_authToken" $(fontAwesomeToken)
@@ -33,45 +32,5 @@ stages:
         npm install
         echo -e "FULL_JS_LICENSE_KEY=$(FULL_JS_LICENSE_KEY)\nEMAIL_JS_SERVICE_ID=$(EMAIL_JS_SERVICE_ID)\nEMAIL_JS_TEMPLATE_ID=$(EMAIL_JS_TEMPLATE_ID)\nEMAIL_JS_USER_ID=$(EMAIL_JS_USER_ID)" > .env
         npm run build --if-present
+        pm2 start server.js
       displayName: 'npm install and build'
-    - task: CopyFiles@2
-      inputs:
-        SourceFolder: '$(System.DefaultWorkingDirectory)/dist'
-        Contents: '**'
-        TargetFolder: '$(Build.ArtifactStagingDirectory)'
-    - upload: $(Build.ArtifactStagingDirectory)
-      artifact: drop
-- stage: Deploy
-  displayName: Deploy Stage
-  jobs:
-  - deployment: VMDeploy
-    displayName: Deploy into VM
-    environment:
-      name: 'portfolio-env'
-      resourceType: VirtualMachine
-    strategy:
-        rolling:
-          maxParallel: 5  #for percentages, mention as x%
-          preDeploy:
-            steps:
-            - download: current
-              artifact: drop
-            - script: echo initialize, cleanup, backup, install certs
-          deploy:
-            steps:
-            - task: Bash@3
-              inputs:
-                targetType: 'inline'
-                script: |
-                  rm -rf $(sshStaticPath) || true
-                  mkdir $(sshStaticPath) || true
-                  cp -r $(Pipeline.Workspace)/drop/* $(sshStaticPath)
-                  echo Pipeline workspace path: $(Pipeline.Workspace)
-                  rm -rf $(Pipeline.Workspace) || true
-          on:
-            failure:
-              steps:
-              - script: echo Restore from backup! Deploy failed!
-            success:
-              steps:
-              - script: echo Deploy succeed!
