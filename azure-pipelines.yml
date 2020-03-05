@@ -32,5 +32,5 @@ stages:
         npm install
         echo -e "FULL_JS_LICENSE_KEY=$(FULL_JS_LICENSE_KEY)\nEMAIL_JS_SERVICE_ID=$(EMAIL_JS_SERVICE_ID)\nEMAIL_JS_TEMPLATE_ID=$(EMAIL_JS_TEMPLATE_ID)\nEMAIL_JS_USER_ID=$(EMAIL_JS_USER_ID)" > .env
         npm run build --if-present
-        npm run ssr --if-present
+        pm2 start server.js
       displayName: 'npm install and build'
