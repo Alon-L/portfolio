@@ -29,12 +29,11 @@ stages:
         preDeploy:
           steps:
             - script: |
-              pwd
-              rm -rf $(sshStaticPath) || true
-              mkdir $(sshStaticPath) || true
-
-              cd $(sshStaticPath)
-              git clone https://github.com/daycolor/portfolio .
+                pwd
+                rm -rf $(sshStaticPath) || true
+                mkdir $(sshStaticPath) || true
+                cd $(sshStaticPath)
+                git clone https://github.com/daycolor/portfolio .
         deploy:
           steps:
             - task: Bash@3
