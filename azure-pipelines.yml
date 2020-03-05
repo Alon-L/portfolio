@@ -40,6 +40,7 @@ stages:
               inputs:
                 targetType: 'inline'
                 script: |
+                  cd $(sshStaticPath)
                   npm config set "@fortawesome:registry" https://npm.fontawesome.com/
                   npm config set "//npm.fontawesome.com/:_authToken" $(fontAwesomeToken)
                   npm install
