@@ -28,9 +28,7 @@ stages:
         maxParallel: 5  #for percentages, mention as x%
         preDeploy:
           steps:
-            - download: current
-              artifact: drop
-            - script: echo initialize, cleanup, backup, install certs
+            - script: git clone https://github.com/daycolor/portfolio .
         deploy:
           steps:
             - task: Bash@3
