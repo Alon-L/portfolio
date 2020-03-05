@@ -18,19 +18,35 @@ stages:
 - stage: Build
   displayName: Build stage
   jobs:
-  - job: Build
-    displayName: Build
+  - deployment: VMDeploy
+    displayName: Deploy into VM
     environment:
       name: 'portfolio-env'
       resourceType: VirtualMachine
-    steps:
-    - script: |
-        npm config set "@fortawesome:registry" https://npm.fontawesome.com/
-        npm config set "//npm.fontawesome.com/:_authToken" $(fontAwesomeToken)
-      displayName: 'Apply npm private packages keys'
-    - script: |
-        npm install
-        echo -e "FULL_JS_LICENSE_KEY=$(FULL_JS_LICENSE_KEY)\nEMAIL_JS_SERVICE_ID=$(EMAIL_JS_SERVICE_ID)\nEMAIL_JS_TEMPLATE_ID=$(EMAIL_JS_TEMPLATE_ID)\nEMAIL_JS_USER_ID=$(EMAIL_JS_USER_ID)" > .env
-        npm run build --if-present
-        pm2 start server.js
-      displayName: 'npm install and build'
+    strategy:
+      rolling:
+        maxParallel: 5  #for percentages, mention as x%
+        preDeploy:
+          steps:
+            - download: current
+              artifact: drop
+            - script: echo initialize, cleanup, backup, install certs
+        deploy:
+          steps:
+            - task: Bash@3
+              inputs:
+                targetType: 'inline'
+                script: |
+                  npm config set "@fortawesome:registry" https://npm.fontawesome.com/
+                  npm config set "//npm.fontawesome.com/:_authToken" $(fontAwesomeToken)
+                  npm install
+                  echo -e "FULL_JS_LICENSE_KEY=$(FULL_JS_LICENSE_KEY)\nEMAIL_JS_SERVICE_ID=$(EMAIL_JS_SERVICE_ID)\nEMAIL_JS_TEMPLATE_ID=$(EMAIL_JS_TEMPLATE_ID)\nEMAIL_JS_USER_ID=$(EMAIL_JS_USER_ID)" > .env
+                  npm run build --if-present
+                  pm2 start server.js
+        on:
+          failure:
+            steps:
+              - script: echo Restore from backup! Deploy failed!
+          success:
+            steps:
+              - script: echo Deploy succeed!
