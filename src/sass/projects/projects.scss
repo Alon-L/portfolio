@@ -33,6 +33,7 @@ $square-border-radius: 130px;
 
     .arrow {
       transform: rotate(180deg);
+      left: initial;
       right: 20px;
 
       .arrow-icon {

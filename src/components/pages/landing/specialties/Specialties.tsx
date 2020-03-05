@@ -25,7 +25,7 @@ class Specialties extends Component {
           <SpecialtiesBackground/>
           <Container className="section mb-5 position-relative">
             <div className="section-spacer">
-              <h1 className="title text-center mb-5">Specialties</h1>
+              <p className="h1 title text-center mb-5">Specialties</p>
               <div className="specialties vh-100">
                 {this.specialties.map(({ title, path, dimensions, background, placeholder }) => (
                   <SpecialtyBox key={title} title={title} path={path} dimensions={dimensions} 

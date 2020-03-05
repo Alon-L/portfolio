@@ -6,6 +6,7 @@ import { faEnvelope } from '@fortawesome/pro-solid-svg-icons';
 
 export interface Social {
   icon: IconDefinition;
+  name: string;
   href: string;
 }
 
@@ -13,14 +14,17 @@ class HomeContentSocials extends Component {
   socials: Social[] = [
     {
       icon: faTwitter,
+      name: 'Twitter',
       href: 'https://twitter.com/daycolor_'
     },
     {
       icon: faGithub,
+      name: 'GitHub',
       href: 'https://github.com/DayColor'
     },
     {
       icon: faEnvelope,
+      name: 'Email',
       href: 'mailto:inquiries@alonlivne.dev'
     }
   ];
@@ -28,8 +32,8 @@ class HomeContentSocials extends Component {
   render() {
     return (
       <div className="d-flex">
-        {this.socials.map(({ icon, href }) => (
-          <HomeContentSocial key={href} icon={icon} href={href}/>
+        {this.socials.map(({ icon, name, href }) => (
+          <HomeContentSocial key={href} icon={icon} name={name} href={href}/>
         ))}
       </div>
     );

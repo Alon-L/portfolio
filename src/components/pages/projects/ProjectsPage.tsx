@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 import { ReactFullPageTypes } from '../../../types';
 import path from 'path';
 import ProjectGoBack from './ProjectGoBack';
-import ProjectSection from './ProjectSection';
+import ProjectSection from './section/ProjectSection';
 import { ProjectsRoute } from '../../../containers/Routes';
 
 export interface ProjectButtons {
@@ -42,13 +42,14 @@ class ProjectsPage extends Component<Props, State> {
     const { props: { projects, path: backgroundFolder }, state: { color } } = this;
 
     return (
-      <div>
+      <Fragment>
         <ProjectGoBack color={color}/>
         <ReactFullpage
           licenseKey={process.env.FULL_JS_LICENSE_KEY}
           scrollingSpeed={1000}
           navigation={true}
           navigationPosition={'right'}
+          scrollOverflow={true}
           onLeave={(origin: ReactFullPageTypes.Origin, destination: ReactFullPageTypes.Destination) => {
             this.setState({
               color: destination.item.getAttribute('data-background-color'),
@@ -85,7 +86,7 @@ class ProjectsPage extends Component<Props, State> {
             );
           }}
         />
-      </div>
+      </Fragment>
     );
   }
 }

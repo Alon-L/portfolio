@@ -10,7 +10,7 @@ class PreviewFeatured extends Component {
         <div className="preview-right">
           <div className="preview-featured-fill">
             <div className="preview-img">
-              <Laptop width={650} className="preview-featured-image"/>
+              <Laptop aria-label="Laptop" width={650} className="preview-featured-image"/>
             </div>
           </div>
         </div>

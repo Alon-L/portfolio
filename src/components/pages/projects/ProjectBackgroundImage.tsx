@@ -11,7 +11,6 @@ class ProjectBackgroundImage extends Component<Props> {
 
   render() {
     const { background } = this.props;
-    console.log(background);
     return (
       <Col className="col-auto project-background">
         <LazyLoad>

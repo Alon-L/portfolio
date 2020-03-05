@@ -8,7 +8,7 @@ class ContactBackground extends Component {
       <div className="mt-n7">
         <Row className="justify-content-center">
           <Col md={10}>
-            <Metropolis style={{ opacity: .5 }}/>
+            <Metropolis aria-label="Metropolis" style={{ opacity: .5 }}/>
           </Col>
         </Row>
       </div>

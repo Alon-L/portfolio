@@ -1,5 +1,5 @@
 import { HomeHeroCol, Letters } from '../store/types';
-import { TweenLite } from "gsap";
+import { TweenLite } from 'gsap';
 
 class HomeLettersMovement {
   private readonly letters: Letters;
@@ -11,8 +11,8 @@ class HomeLettersMovement {
     this.primaryCol = primaryCol;
   }
 
-  public startHandler() {
-    document.addEventListener('mousemove', ev => {
+  public addHandler() {
+    document.addEventListener('mousemove', (ev) => {
       this.ev = ev;
       this.moveBackground();
       this.transformLetters();

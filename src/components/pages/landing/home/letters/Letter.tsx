@@ -12,12 +12,17 @@ interface Props {
 
 class Letter extends Component<Props> {
   public props: Props;
+  private letter: SVGElement;
+
+  componentDidMount(): void {
+    this.props.addLetter(this.letter)
+  }
 
   render() {
     const { LetterSVG } = this.props;
     return (
       <div className="letter">
-        <LetterSVG width={350} ref={(e: SVGElement) => this.props.addLetter(e)}/>
+        <LetterSVG width={350} ref={(e: SVGElement) => this.letter = e}/>
       </div>
     );
   }
