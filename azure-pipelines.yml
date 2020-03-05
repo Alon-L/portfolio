@@ -28,7 +28,13 @@ stages:
         maxParallel: 5  #for percentages, mention as x%
         preDeploy:
           steps:
-            - script: git clone https://github.com/daycolor/portfolio .
+            - script: |
+              pwd
+              rm -rf $(sshStaticPath) || true
+              mkdir $(sshStaticPath) || true
+
+              cd $(sshStaticPath)
+              git clone https://github.com/daycolor/portfolio .
         deploy:
           steps:
             - task: Bash@3
