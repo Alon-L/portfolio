@@ -11,7 +11,7 @@ class HomeContentTransformations extends Component {
       <div className="mx-sm-5 mx-2 pt-5 h-100">
         <div className="position-relative h-100">
           <HomeContentLogo/>
-          <Row className="h-100 mr-0">
+          <Row className="h-100 mr-sm-0">
             <Col md={6} className="home-content-col">
               <FlexboxCompleteCenter>
                 <HomeContent/>

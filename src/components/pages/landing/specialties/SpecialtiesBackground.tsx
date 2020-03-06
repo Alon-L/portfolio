@@ -8,8 +8,8 @@ class SpecialtiesBackground extends Component {
       <div className="specialty-box-background">
         <SignTimes left={225} top={175}/>
         <SignCircle right={225} top={350}/>
-        <SignCircle left={120} top={750}/>
-        <SignTimes right={150} top={650}/>
+        <SignCircle left={120} bottom={300}/>
+        <SignTimes right={150} bottom={375}/>
       </div>
     );
   }

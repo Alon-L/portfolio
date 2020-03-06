@@ -1,8 +1,8 @@
 .circular-icon {
   padding: .75rem;
   border: 1px solid $brand-color;
-  border-radius: 100%;
   transition: all .3s ease-in-out;
+  @extend .circle;
 
   &:hover {
     background: $brand-color;
