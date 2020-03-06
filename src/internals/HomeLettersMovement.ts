@@ -21,7 +21,7 @@ class HomeLettersMovement {
 
   private moveBackground() {
     TweenLite.to(this.primaryCol, 0.3, {
-      width: (54 - ((this.ev.pageX / document.body.clientWidth) * 8)) + '%',
+      width: (54 - ((this.ev.pageX / document.body.clientWidth) * 8)) + 'vw',
     });
   }
 

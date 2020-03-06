@@ -20,7 +20,7 @@ class PreviewFill extends Component<Props> {
     this.primaryCol.style.width = '0px';
 
     TweenLite.to(this.primaryCol, 0.65, {
-      width: '50%',
+      width: '50vw',
       ease: Power1.easeInOut,
     });
   }
@@ -30,7 +30,7 @@ class PreviewFill extends Component<Props> {
       <div className="preview-fill" ref={e => {
         this.props.setCol(e);
         this.primaryCol = e
-      }} style={{ width: '50%' }}>
+      }} style={{ width: '50vw' }}>
         <Letter LetterSVG={Strip}/>
       </div>
     );
