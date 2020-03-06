@@ -6,7 +6,7 @@ import { SET_COL } from '../../../../../store/types/home/hero';
 import { connect } from 'react-redux';
 import { HomeHeroCol } from '../../../../../store/types';
 import { setPrimaryCol } from '../../../../../store/actions/home/hero';
-import { TweenLite } from "gsap";
+import { TweenLite, Power1 } from 'gsap';
 
 interface Props {
   setCol?: typeof setPrimaryCol;
@@ -17,14 +17,20 @@ class PreviewFill extends Component<Props> {
   private primaryCol: HTMLDivElement;
 
   componentDidMount(): void {
+    this.primaryCol.style.width = '0px';
+
     TweenLite.to(this.primaryCol, 0.65, {
       width: '50%',
+      ease: Power1.easeInOut,
     });
   }
 
   render() {
     return (
-      <div className="preview-fill" ref={e => {this.props.setCol(e); this.primaryCol = e}} style={{ width: 0 }}>
+      <div className="preview-fill" ref={e => {
+        this.props.setCol(e);
+        this.primaryCol = e
+      }} style={{ width: '50%' }}>
         <Letter LetterSVG={Strip}/>
       </div>
     );
