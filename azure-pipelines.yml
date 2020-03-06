@@ -16,7 +16,7 @@ variables:
 
 stages:
 - stage: Deploy
-  displayName: Build stage
+  displayName: Deploy stage
   jobs:
   - deployment: VMDeploy
     displayName: Deploy into VM

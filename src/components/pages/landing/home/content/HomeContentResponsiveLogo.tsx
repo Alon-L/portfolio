@@ -6,7 +6,7 @@ import FlexboxCompleteCenter from '../../../../tools/flexbox/FlexboxCompleteCent
 class HomeContentResponsiveLogo extends Component {
   render() {
     return (
-      <Col md={6} className="home-content-responsive-logo position-static">
+      <Col md={6} className="home-content-logo-responsive position-static">
         <FlexboxCompleteCenter>
           <Combined className="letter-combined mx-auto" width={350}/>
         </FlexboxCompleteCenter>
