@@ -15,7 +15,7 @@ variables:
 - group: 'Portfolio Variables'
 
 stages:
-- stage: Build
+- stage: Deploy
   displayName: Build stage
   jobs:
   - deployment: VMDeploy
@@ -25,11 +25,10 @@ stages:
       resourceType: VirtualMachine
     strategy:
       rolling:
-        maxParallel: 5  #for percentages, mention as x%
+        maxParallel: 5
         preDeploy:
           steps:
             - script: |
-                pwd
                 rm -rf $(sshStaticPath) || true
                 mkdir $(sshStaticPath) || true
                 cd $(sshStaticPath)
@@ -46,7 +45,7 @@ stages:
                   npm install
                   echo -e "FULL_JS_LICENSE_KEY=$(FULL_JS_LICENSE_KEY)\nEMAIL_JS_SERVICE_ID=$(EMAIL_JS_SERVICE_ID)\nEMAIL_JS_TEMPLATE_ID=$(EMAIL_JS_TEMPLATE_ID)\nEMAIL_JS_USER_ID=$(EMAIL_JS_USER_ID)" > .env
                   npm run build --if-present
-                  pm2 start server.js || pm2 restart server.js
+                  pm2 start server.js --name $(pm2ProcessName) || pm2 restart server.js
         on:
           failure:
             steps:
