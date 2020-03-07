@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Col } from 'react-bootstrap';
-import LazyLoad from 'react-lazy-load';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 interface Props {
   background: string;
@@ -13,9 +13,9 @@ class ProjectBackgroundImage extends Component<Props> {
     const { background } = this.props;
     return (
       <Col className="col-auto project-background">
-        <LazyLoad>
-          <img className="project-background-image" src={background} alt="Background Image"/>
-        </LazyLoad>
+        <LazyLoadImage src={background}
+          className="project-background-image"
+          alt="Background Image"/>
       </Col>
     );
   }
