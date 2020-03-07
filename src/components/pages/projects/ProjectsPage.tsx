@@ -4,7 +4,7 @@ import { ReactFullPageTypes } from '../../../types';
 import path from 'path';
 import ProjectGoBack from './ProjectGoBack';
 import ProjectSection from './section/ProjectSection';
-import { ProjectsRoute } from '../../../containers/Routes';
+import { ProjectsRoute } from '../../../containers/ProjectsRoutes';
 
 export interface ProjectButtons {
   visit?: string;
@@ -21,6 +21,7 @@ export interface Project {
     secondary: string;
   },
   buttons?: ProjectButtons;
+  award?: boolean;
 }
 
 type Props = ProjectsRoute;
@@ -66,7 +67,8 @@ class ProjectsPage extends Component<Props, State> {
                       toolsUsed,
                       background,
                       colors: { primary, secondary },
-                      buttons
+                      buttons,
+                      award,
                     }, i
                   ) => {
                     const backgroundPath = path.join('../assets/specialties/pages/', backgroundFolder, background);
@@ -77,7 +79,7 @@ class ProjectsPage extends Component<Props, State> {
                       <div key={title} data-background-color={primary} className="section overflow-hidden"
                         style={sectionStyle}>
                         <ProjectSection title={title} desc={desc} toolsUsed={toolsUsed} background={backgroundPath}
-                          colors={{ primary, secondary }} buttons={buttons} reverse={i % 2 !== 0}/>
+                          colors={{ primary, secondary }} buttons={buttons} award={award} reverse={i % 2 !== 0}/>
                       </div>
                     );
                   })

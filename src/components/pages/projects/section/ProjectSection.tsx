@@ -26,7 +26,7 @@ class ProjectSection extends Component<Props> {
   render() {
     const {
       title, desc, toolsUsed, background, colors: { primary },
-      buttons, reverse
+      buttons, reverse, award,
     } = this.props;
 
     return (
@@ -34,7 +34,7 @@ class ProjectSection extends Component<Props> {
         <div className="h-100 d-flex align-items-center">
           <ProjectBackgroundBlobs color={primary}/>
           <Row className={`justify-content-center ${reverse ? 'flex-row-reverse' : 'flex-row'}`}>
-            <ProjectBackgroundImage background={background}/>
+            <ProjectBackgroundImage background={background} color={primary} award={award}/>
             <Col lg={4} className="col-md-auto">
               <Col className="color-white">
                 <ProjectSectionHeader title={title} desc={desc}/>

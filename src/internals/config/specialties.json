@@ -249,7 +249,8 @@
         "buttons": {
           "visit": "https://plicked.com",
           "source": "https://github.com"
-        }
+        },
+        "award": true
       },
       {
         "title": "TypeRacer Bot",

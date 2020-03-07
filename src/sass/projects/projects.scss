@@ -2,6 +2,9 @@ $go-back-dimensions: 100px;
 $circle-dimensions: 550px;
 $square-dimensions: 825px;
 $square-border-radius: 130px;
+$project-background-award-width: 66px;
+$project-background-award-triangle-height: $project-background-award-width / 2;
+$project-background-award-triangle-width: $project-background-award-triangle-height - 7px;
 
 .go-back {
   position: fixed;
@@ -73,6 +76,37 @@ $square-border-radius: 130px;
     border-radius: 15px;
     box-shadow: 10px 10px 25px 0 rgba(0, 0, 0, .35);
     width: 100%;
+  }
+
+  &-award {
+    width: $project-background-award-width;
+    border-top-right-radius: 15px;
+    top: 0;
+    right: 15px;
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 100%;
+    }
+
+    &:before {
+      left: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: $project-background-award-triangle-width $project-background-award-triangle-height 0 0;
+      border-color: #ffffff transparent transparent transparent;
+    }
+
+    &:after {
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 $project-background-award-triangle-height $project-background-award-triangle-width 0;
+      border-color: transparent #ffffff transparent transparent;
+    }
   }
 
   @include media('<1520px') {
