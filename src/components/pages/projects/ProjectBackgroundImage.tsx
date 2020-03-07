@@ -15,7 +15,7 @@ class ProjectBackgroundImage extends Component<Props> {
   render() {
     const { background, color, award } = this.props;
     return (
-      <Col className="col-auto project-background">
+      <Col className="col-auto project-background d-flex align-items-center">
         {award ? <ProjectSectionAward color={color}/> : null}
         <LazyLoadImage src={background}
           className="project-background-image"
