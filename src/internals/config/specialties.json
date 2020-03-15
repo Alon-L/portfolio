@@ -11,8 +11,8 @@
     "projects": [
       {
         "title": "Plicked - SMM",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
-        "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
+        "desc": "Plicked is a social media marketing service. I was requested to create a static website and a panel design for them. The site includes multiple pages, navigations, and cleanly designed sections.",
+        "toolsUsed": "The website is built entirely on ReactJS. I also used TypeScript, Webpack, Redux, and SCSS, along with Bootstrap, for stylizing. The site also required a panel design, for that I used static HTML, CSS, and JavaScript for special effects. The panel was quite limiting, but I am happy with the final results.",
         "background": "plicked-smm.png",
         "colors": {
           "primary": "#35A591",
@@ -24,8 +24,8 @@
       },
       {
         "title": "WumpCraft Website",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
-        "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
+        "desc": "WumpCraft is a Discord Bot explicitly created for Discord's Hack Week 2019 competition. This website is a simple static site that I developed in under 2 hours. The website lists the available bot commands and displays my social media links.",
+        "toolsUsed": "I used ReactJS, Webpack, and SCSS along with Bootstrap for stylizing.",
         "background": "wumpcraft-website.png",
         "colors": {
           "primary": "#869DEE",
@@ -38,8 +38,8 @@
       },
       {
         "title": "Plicked - Instagram Growth",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
-        "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
+        "desc": "Plicked - Instagram Growth is the second commission made for Plicked. It is based on the original website, though, with a few tweaks and additional pages.",
+        "toolsUsed": "I once again used ReactJS entirely, combined with TypeScript, Webpack, SCSS along Bootstrap for stylizing, and some more additional SCSS libraries.",
         "background": "plicked-instagram-growth.png",
         "colors": {
           "primary": "#5c5adb",
@@ -63,8 +63,8 @@
     "projects": [
       {
         "title": "Proxies Creator",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
-        "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
+        "desc": "Proxies Creator is an ElectronJS application that automatically generates proxies using multiple eCommerce APIs, such as Google Cloud, DigitalOcean, Scaleway, etc.\nClients enter their API key, which later gets used to generate proxies. It then verifies whether the proxies are valid for use, and sends them back to the client.\nAfter using the proxies, the client can choose to terminate them via the application interface.",
+        "toolsUsed": "The application was made using ElectronJS, HTML, and CSS.",
         "background": "proxies-creator.png",
         "colors": {
           "primary": "#c75050",
@@ -77,8 +77,8 @@
       },
       {
         "title": "Proxy Tester",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
-        "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
+        "desc": "Proxy Tester is another ElectronJS application that validates proxies from an entered list of proxy IPs. The application returns the valid proxies to the client for their usage. The app also has a server-side backend that verifies the proxies using an external server for a preciser validation.",
+        "toolsUsed": "The electron app uses ElectronJS, of course, along with ReactJS and Flow.\nThe server-side backend uses fastify - an ExpressJS alternative.",
         "background": "proxy-tester.png",
         "colors": {
           "primary": "#73d4eb",
@@ -91,8 +91,8 @@
       },
       {
         "title": "Twitter Monitor",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
-        "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
+        "desc": "Twitter Monitor is an application that notifies the client whenever a tweet gets posted, according to their settings. The app listens to a server-side backend which scrapes Twitter's HTML according to each client's settings.\nThe clients can choose the twitter profiles for which they will be notified, and a list of words that must (or must not) appear in the new tweet.",
+        "toolsUsed": "The application is built on ElectronJS along with ReactJS, Redux, and Socket.IO.\nThe server-side backend uses MongoDB to store user data; Cheerio to scrape the HTML, and gather the required data; Proxy list APIs in order to generate the proxies necessary to scrape the page constantly. I also used the library fastify, which is an ExpressJS alternative.",
         "background": "twitter-monitor.png",
         "colors": {
           "primary": "#ba30a8",
@@ -117,8 +117,8 @@
     "projects": [
       {
         "title": "JSON Documentation Generator",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
-        "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
+        "desc": "JSON Documentation Generator is a NodeJS CLI package used to generate markdown documentation files for JSON configuration files.\nThe package fetches all the properties of the file and then cleanly formats them, using markdowns, into a .md file.",
+        "toolsUsed": "The package is dependent-free - it does not use any NodeJS packages to function. It uses NodeJS's native way of creating CLI packages.",
         "background": "json-documentation-generator.png",
         "colors": {
           "primary": "#db2a2a",
