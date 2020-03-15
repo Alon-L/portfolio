@@ -2,7 +2,7 @@ version: 2.1
 orbs:
   node: circleci/node@1.1.6
 jobs:
-  setup-ssh-job:
+  deploy-job:
     executor:
       name: node/default
     steps:
@@ -14,10 +14,6 @@ jobs:
           name: SSH into VM
           command: |
             ssh $SSH_USER@$SSH_IP
-  deploy-job:
-    executor:
-      name: node/default
-    steps:
       - run:
           name: Apply npm private packages keys
           command: |
@@ -37,9 +33,8 @@ jobs:
   
 workflows:
     deploy:
-      branches:
-        only:
-          - master
       jobs:
-        - setup-ssh-job          
-        - deploy-job
+        - deploy-job:
+            filters:
+              branches:
+                only: master
