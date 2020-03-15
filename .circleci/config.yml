@@ -41,5 +41,5 @@ workflows:
         only:
           - master
       jobs:
-        - setup-ssh-job:              
+        - setup-ssh-job          
         - deploy-job
