@@ -118,7 +118,7 @@ $project-background-award-triangle-width: $project-background-award-triangle-hei
   }
 
   @include media('<600px') {
-    display: none;
+    display: none !important;
   }
 }
 
