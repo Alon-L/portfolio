@@ -1,0 +1,45 @@
+version: 2.1
+orbs:
+  node: circleci/node@1.1.6
+jobs:
+  setup-ssh-job:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - ""
+      - run:
+          name: SSH into VM
+          command: |
+            ssh $SSH_USER@$SSH_IP
+  deploy-job:
+    executor:
+      name: node/default
+    steps:
+      - run:
+          name: Apply npm private packages keys
+          command: |
+            npm config set "@fortawesome:registry" https://npm.fontawesome.com/
+            npm config set "//npm.fontawesome.com/:_authToken" $FONTAWESOME_TOKEN
+      - node/with-cache:
+          steps:
+            - run: npm install
+            - run: npm run build
+      - run:
+          name: Clone into VM
+          command: |
+            rm -rf $SSH_STATIC_PATH || true
+            mkdir $SSH_STATIC_PATH || true
+            exit
+            scp -r ./dist/* $SSH_USER@$SSH_IP:$SSH_STATIC_PATH
+  
+workflows:
+    deploy:
+      branches:
+        only:
+          - master
+      jobs:
+        - setup-ssh-job:              
+        - deploy-job
