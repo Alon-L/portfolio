@@ -36,7 +36,7 @@ class ProjectSection extends Component<Props> {
           <Row className={`justify-content-center ${reverse ? 'flex-row-reverse' : 'flex-row'}`}>
             <ProjectBackgroundImage background={background} color={primary} award={award}/>
             <Col lg={4} className="col-md-auto">
-              <Col className="color-white">
+              <Col className="project-content color-white">
                 <ProjectSectionHeader title={title} desc={desc}/>
                 <ProjectSectionTools toolsUsed={toolsUsed}/>
                 <ProjectSectionButtons color={primary} buttons={buttons}/>

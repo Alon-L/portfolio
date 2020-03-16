@@ -90,7 +90,7 @@ class ContactForm extends Component<{}, State> {
     const { state: { status }, handleFormSubmit, handleInputChange } = this;
 
     return (
-      <Col md={5} className="contact-form">
+      <Col md={6} className="contact-form">
         <Form onSubmit={handleFormSubmit}>
           <FormGroup>
             {

@@ -2,10 +2,14 @@ $home-content-logo-height: 35px;
 $letter-combined-height: 50px;
 
 .home-content {
-  width: 65%;
+  width: 60%;
 
   @include media('<tablet') {
-    top: 25%;
+    margin-top: 2rem !important;
+
+    &-row {
+      height: initial !important;
+    }
   }
 
   @include media ('<#{$home-section-transformation-width + 200px}') {
@@ -20,16 +24,9 @@ $letter-combined-height: 50px;
     min-width: 200px;
   }
 
-  &-col {
-    @include media('<tablet') {
-      height: 100%;
-    }
-  }
-
   &-logo {
     top: 0;
-    width: auto;
-    height: $home-content-logo-height;
+    width: 100%;
 
     &-responsive {
       display: none;
@@ -38,14 +35,8 @@ $letter-combined-height: 50px;
         display: block;
       }
 
-      @include media('<tablet') {
-        .letter-combined {
-          transform: translateY(-5px);
-          position: absolute;
-          right: 0;
-          top: 0;
-          width: $letter-combined-height;
-        }
+      .letter-combined {
+        width: $letter-combined-height;
       }
     }
   }

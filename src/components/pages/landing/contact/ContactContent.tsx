@@ -4,12 +4,9 @@ import { Col } from 'react-bootstrap';
 class ContactContent extends Component {
   render() {
     return (
-      <Col md={5} className="mr-md-5 text-md-left text-center">
+      <Col md={4} className="mr-md-5 text-md-left text-center">
         <h1 className="title">Contact</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet beatae commodi dolore ea eaque
-          error et excepturi incidunt ipsam, iure laborum nesciunt omnis pariatur praesentium quo, sint
-          suscipit.
-          Voluptate.</p>
+        <p>For any further questions or any business requests, feel free to contact me. All inquiries submitted here will go directly to work Email, and I will try to respond to them as soon as possible!</p>
       </Col>
     );
   }
