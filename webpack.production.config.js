@@ -4,7 +4,7 @@ require('dotenv').config();
 
 module.exports = {
   mode: 'production',
-  entry: './src/server.tsx',
+  entry: './src/server/server.tsx',
   target: 'node',
   externals: [nodeExternals()],
   module: {
