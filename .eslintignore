@@ -57,3 +57,4 @@ package.json
 
 # Webpack
 webpack.config.js
+webpack.production.config.js

@@ -12,7 +12,7 @@ class ProjectSectionHeader extends Component<Props> {
     return (
       <div className="mb-5">
         <h1 className="title display-4">{title}</h1>
-        <p>{desc}</p>
+        <p className="desc">{desc}</p>
       </div>
     );
   }

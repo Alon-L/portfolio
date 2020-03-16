@@ -4,8 +4,7 @@ import express, { Request, Response } from 'express';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import App from '../App';
-import { Router, StaticRouter } from 'react-router-dom';
-import { createMemoryHistory } from 'history';
+import { StaticRouter } from 'react-router-dom';
 import { StaticRouterContext } from 'react-router';
 
 const app = express();

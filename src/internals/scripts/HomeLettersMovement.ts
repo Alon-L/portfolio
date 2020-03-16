@@ -1,4 +1,4 @@
-import { HomeHeroCol, Letters } from '../store/types';
+import { HomeHeroCol, Letters } from '../../store/types';
 import { TweenLite } from 'gsap';
 
 class HomeLettersMovement {

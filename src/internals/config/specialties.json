@@ -69,10 +69,6 @@
         "colors": {
           "primary": "#c75050",
           "secondary": "#d96262"
-        },
-        "buttons": {
-          "visit": "https://plicked.com",
-          "source": "https://github.com"
         }
       },
       {
@@ -83,10 +79,6 @@
         "colors": {
           "primary": "#73d4eb",
           "secondary": "#62c3d9"
-        },
-        "buttons": {
-          "visit": "https://plicked.com",
-          "source": "https://github.com"
         }
       },
       {
@@ -97,10 +89,6 @@
         "colors": {
           "primary": "#ba30a8",
           "secondary": "#a62695"
-        },
-        "buttons": {
-          "visit": "https://plicked.com",
-          "source": "https://github.com"
         }
       }
     ]
@@ -125,50 +113,46 @@
           "secondary": "#bf1515"
         },
         "buttons": {
-          "visit": "https://plicked.com",
-          "source": "https://github.com"
+          "source": "https://github.com/DayColor/json-documentation-file-generator"
         }
       },
       {
         "title": "Currency Converter",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
-        "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
+        "desc": "Currency Converter is a browser extension that converts prices shown on marketing websites into a different currency, that can be chosen from a list of available currencies.",
+        "toolsUsed": "I used Firefox's extensions API as well as another API to receive the value in real-time of every currency.",
         "background": "currency-converter-extension.png",
         "colors": {
           "primary": "#22e3a3",
           "secondary": "#15bf87"
         },
         "buttons": {
-          "visit": "https://plicked.com",
-          "source": "https://github.com"
+          "source": "https://github.com/DayColor/currency-converter-extension"
         }
       },
       {
         "title": "TypeRacer Practice Extension",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
-        "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
+        "desc": "TypeRacer Practice Extension is another browser extension that was requested by the TypeRacer community. The extension will display the number of saves the user has for a quote once they finish it. It uses built-in browser storage to retrieve the data.",
+        "toolsUsed": "I initially built the extension on Firefox's extensions API, but then I  also decided to add support for Chrome.",
         "background": "typeracer-practice-extension.png",
         "colors": {
           "primary": "#6538eb",
           "secondary": "#562adb"
         },
         "buttons": {
-          "visit": "https://plicked.com",
-          "source": "https://github.com"
+          "source": "https://github.com/DayColor/typeracer-practice-extension"
         }
       },
       {
         "title": "CSS Variables Remover",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
-        "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
+        "desc": "CSS Variable Remover is a script that was initially developed to help me support older browsers that do not support variables in CSS code.\nThe script automatically replaces all variables in the code with their value.",
+        "toolsUsed": "The script does not use any additional tools besides NodeJS.",
         "background": "css-variables-remover.png",
         "colors": {
           "primary": "#c42346",
           "secondary": "#db3257"
         },
         "buttons": {
-          "visit": "https://plicked.com",
-          "source": "https://github.com"
+          "source": "https://github.com/DayColor/css-variables-remover"
         }
       }
     ]
@@ -185,44 +169,41 @@
     "projects": [
       {
         "title": "ASCII Art Video",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
-        "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
+        "desc": "ASCII Art Video is a side-project of mine that converts a video in real-time into ASCII letters and displays them. I encountered a few minor problems throughout the project, though the performant issue was the hardest to overcome.\nThe code runs on the CPU, which, unlike the GPU, is not fast enough for mathematic operations. For that sole reason, I had to optimize my code to display the video on at least 30 frames per second. I ultimately overcame this issue, and I am pleased with the final results.",
+        "toolsUsed": "The project uses TypeScript along with Webpack for compilation. It also strongly depends on the Canvas API.",
         "background": "ascii-art-video.png",
         "colors": {
           "primary": "#54c3eb",
           "secondary": "#42a6c9"
         },
         "buttons": {
-          "visit": "https://plicked.com",
-          "source": "https://github.com"
+          "source": "https://github.com/DayColor/ascii-art-video"
         }
       },
       {
         "title": "SMS Notifier Bot",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
-        "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
+        "desc": "SMS Notifier Bot notifies you on Discord when you receive SMS messages on your mobile device. The project is split into two parts: an android application and a Discord Bot.\nThe android application listens for any incoming notifications on the device and sends them to the Discord Bot, which then notifies the user.",
+        "toolsUsed": "The android application was built using Kotlin, and the Discord Bot uses the Discord.JS library.",
         "background": "sms-discord-bot.png",
         "colors": {
           "primary": "#7752de",
           "secondary": "#5a3ab5"
         },
         "buttons": {
-          "visit": "https://plicked.com",
-          "source": "https://github.com"
+          "source": "https://github.com/DayColor/SMS-Discord-Bot"
         }
       },
       {
         "title": "ASCII Art Images",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
-        "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
+        "desc": "ASCII Art Images receives an image and turns it into ASCII letters. Although similar to ASCII Art Videos, this project prefers performance over time, and it looks into more depth while generating the letters.",
+        "toolsUsed": "I used TypeScript along with Webpack for compilation. The project also strongly depends on the Canvas API.",
         "background": "ascii-art-images.png",
         "colors": {
           "primary": "#52de8c",
           "secondary": "#42c97a"
         },
         "buttons": {
-          "visit": "https://plicked.com",
-          "source": "https://github.com"
+          "source": "https://github.com/DayColor/ascii-art"
         }
       }
     ]
@@ -239,59 +220,47 @@
     "projects": [
       {
         "title": "WumpCraft",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
-        "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
+        "desc": "WumpCraft is my winning entry for Discord's Hack Week 2019 competition. The competition required all entries to be created in under five days. This bot visualizes a recreation of the video game Minecraft using Discord's emojis and reactions. Users can move around, complete achievements, and experience Minecraft-like physics and features.\nThe bot won 2nd place in the entertainment category.",
+        "toolsUsed": "The bot uses Discord.JS without any additional libraries, meaning that all physics and events were created by myself.",
         "background": "wumpcraft-bot.png",
         "colors": {
           "primary": "#869DEE",
           "secondary": "#AABFF2"
         },
         "buttons": {
-          "visit": "https://plicked.com",
-          "source": "https://github.com"
+          "visit": "https://wumpcraft.xyz",
+          "source": "https://github.com/DayColor/wumpcraft"
         },
         "award": true
       },
       {
         "title": "TypeRacer Bot",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
-        "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
+        "desc": "TypeRacer Bot simulates TypeRacer on Discord. Users can race solo, duel against another user, or even create groups and race together. The bot randomly selects a text for the participants to race on out of a database of over 5,000 texts. It also includes an advanced anti-cheat system that prevents participants from getting an inhuman score.\nThe bot is partnered with TypeRacer themselves, and it is currently playable on their Discord server.",
+        "toolsUsed": "I used Discord.JS to write the bot, along with a few algorithms I wrote for comparing the users' replies to the original text to find their accuracy.",
         "background": "typeracer-bot.png",
         "colors": {
           "primary": "#2630bf",
           "secondary": "#3742db"
-        },
-        "buttons": {
-          "visit": "https://plicked.com",
-          "source": "https://github.com"
-        }
-      },
-      {
-        "title": "CV Bot",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
-        "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
-        "background": "cv-bot.png",
-        "colors": {
-          "primary": "#37db8e",
-          "secondary": "#2bbd78"
-        },
-        "buttons": {
-          "visit": "https://plicked.com",
-          "source": "https://github.com"
         }
       },
       {
         "title": "Calvin Bot",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquam aperiam atque consectetur delectus eum expedita, impedit officiis reiciendis repudiandae suscipit tempora tempore ullam unde veritatis voluptas voluptatum? Modi, obcaecati!",
-        "toolsUsed": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet aperiam aut dolore eligendi, impedit inventore ipsum iste nam pariatur perspiciatis praesentium quia voluptate. Maiores obcaecati quae quas quis vitae.",
+        "desc": "Calvin is another Discord Bot requested by a client. The bot provides the ability to buy virtual items through Discord using PayPal's API. The bot will create a private ticket channel for the user and generate a PayPal invoice according to their arguments.",
+        "toolsUsed": "I used Discord.JS for the bot. It also uses the PayPal Rest SDK library to communicate with PayPal; and SQLite - a local SQL database to save a minimal amount of data.",
         "background": "calvin.png",
+        "colors": {
+          "primary": "#37db8e",
+          "secondary": "#2bbd78"
+        }
+      },
+      {
+        "title": "CV Bot",
+        "desc": "CV is a Discord Bot requested by a client that plays music using the Lavalink API. The bot receives a song title or a YouTube link as an argument, and then plays that song in a voice channel. It also has the ability to display the lyrics of the currently playing song into a channel on command.",
+        "toolsUsed": "This bot uses Discord.JS to operate. It also uses the Lavalink API to find the requested song; and the KSoft API, which is used to find the lyrics for a song.",
+        "background": "cv-bot.png",
         "colors": {
           "primary": "#3bb4db",
           "secondary": "#2b99bd"
-        },
-        "buttons": {
-          "visit": "https://plicked.com",
-          "source": "https://github.com"
         }
       }
     ]

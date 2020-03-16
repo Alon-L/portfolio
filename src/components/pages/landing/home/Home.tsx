@@ -6,7 +6,7 @@ import { StoreState } from '../../../../store/state';
 import { connect } from 'react-redux';
 import { HomeHeroInitialState } from '../../../../store/reducers/home/hero';
 import HomeContentTransformations from './content/HomeContentTransformations';
-import HomeLettersMovement from '../../../../internals/HomeLettersMovement';
+import HomeLettersMovement from '../../../../internals/scripts/HomeLettersMovement';
 import { Dispatch } from 'redux';
 import { RESET_LETTERS } from '../../../../store/types/home/hero';
 import { resetLetters } from '../../../../store/actions/home/hero';
