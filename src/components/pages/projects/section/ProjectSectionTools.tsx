@@ -12,7 +12,7 @@ class ProjectSectionTools extends Component<Props> {
     return (
       <div className="mb-5">
         <h1 className="title">Tools Used</h1>
-        <p>{toolsUsed}</p>
+        <p className="desc">{toolsUsed}</p>
       </div>
     );
   }

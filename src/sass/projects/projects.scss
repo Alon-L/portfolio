@@ -128,4 +128,14 @@ $project-background-award-triangle-width: $project-background-award-triangle-hei
       font-size: 2rem;
     }
   }
+
+  .desc {
+    white-space: pre-line;
+  }
+
+  &-content {
+    @include media('<tablet') {
+      padding-right: 2.5rem;
+    }
+  }
 }
