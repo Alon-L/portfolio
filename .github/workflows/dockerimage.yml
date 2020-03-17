@@ -12,10 +12,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - name: Create .npmrc
+        run: echo -e "@fortawesome:registry=https://npm.fontawesome.com/\n//npm.fontawesome.com/:_authToken=$FONTAWESOME_TOKEN" > .npmrc
+        env:
+          FONTAWESOME_TOKEN: ${{ secrets.FONTAWESOME_TOKEN }}
       - name: Build docker
-        uses: HurricanKai/Publish-Docker-Github-Action@master
-        with:
-          name: alon/portfolio
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
-          dockerfile: Dockerfile
+        run: sudo docker build -t alon/portfolio .
