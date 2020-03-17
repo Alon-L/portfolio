@@ -25,6 +25,6 @@ jobs:
           docker container stop portfolio || true
       - name: Run docker
         run: |
-          docker run -p $PORT:8080 -d alon/portfolio --name portfolio
+          docker run --name portfolio -p $PORT:8080 -d alon/portfolio
         env:
           PORT: ${{ secrets.PORT }}
