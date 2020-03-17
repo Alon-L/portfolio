@@ -17,8 +17,8 @@ jobs:
         FONTAWESOME_TOKEN: ${{ secrets.FONTAWESOME_TOKEN }}
       run: echo $FONTAWESOME_TOKEN ${FONTAWESOME_TOKEN}
     - name: Test env variable
-      env:
-        TEST_123: TEST
       run: echo Hello World! $TEST_123
+      env:
+        TEST_123: Test
     - name: Build the Docker image
       run: sudo docker build -t alon/portfolio --build-arg FONTAWESOME_TOKEN="$FONTAWESOME_TOKEN" .
