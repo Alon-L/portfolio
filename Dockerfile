@@ -1,5 +1,4 @@
-# First build
-FROM node:12 AS build
+FROM node:12
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -9,27 +8,20 @@ WORKDIR /usr/src/app
 # where available (npm@5+)
 COPY package.json package.json
 
-# License arguments
-ARG FONTAWESOME_TOKEN
-
 # Copy .npmrc for private packages
-RUN echo -e "@fortawesome:registry=https://npm.fontawesome.com/\n//npm.fontawesome.com/:_authToken=$FONTAWESOME_TOKEN" > .npmrc && \
-    cat .npmrc && \
-    npm install --production && \
+COPY .npmrc .npmrc
+
+# Install packages
+RUN npm install --production && \
     rm -f .npmrc
-
-# Second build
-FROM node:12
-
-WORKDIR /usr/src/app
 
 # Bundle app source
 COPY . .
-COPY --from=build /usr/src/app /usr/src/app
 
 # Install PM2
 RUN npm install pm2 -g
 
+# Expose express port
 EXPOSE 8080
 
 CMD [ "npm", "run", "build-and-ssr" ]
