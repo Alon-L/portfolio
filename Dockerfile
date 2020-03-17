@@ -24,9 +24,6 @@ COPY . .
 # Install PM2
 RUN npm install pm2 -g
 
-# Install webpack CLI globally
-RUN npm install webpack webpack-cli -g
-
 # Expose express port
 EXPOSE 8080
 
