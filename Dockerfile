@@ -15,7 +15,7 @@ ARG FONTAWESOME_TOKEN
 ENV FONTAWESOME_TOKEN=$FONTAWESOME_TOKEN
 
 # Install packages
-RUN npm install --production && \
+RUN npm install && \
     rm -f .npmrc
 
 # Bundle app source
