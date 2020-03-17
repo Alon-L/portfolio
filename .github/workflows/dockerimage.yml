@@ -16,5 +16,6 @@ jobs:
         uses: HurricanKai/Publish-Docker-Github-Action@master
         with:
           name: alon/portfolio
-          FONTAWESOME_TOKEN: ${{ secrets.FONTAWESOME_TOKEN }}
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
           dockerfile: Dockerfile
