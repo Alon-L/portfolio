@@ -21,4 +21,4 @@ jobs:
         env:
           TEST_123: Test
       - name: Build the Docker image
-        run: sudo docker build -t alon/portfolio --build-arg FONTAWESOME_TOKEN=$FONTAWESOME_TOKEN .
+        run: sudo docker build -t alon/portfolio --build-arg FONTAWESOME_TOKEN=123 .
