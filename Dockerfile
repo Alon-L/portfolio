@@ -11,6 +11,9 @@ COPY package.json package.json
 # Copy .npmrc for private packages
 COPY .npmrc .npmrc
 
+ARG FONTAWESOME_TOKEN_ARG
+ENV FONTAWESOME_TOKEN=$FONTAWESOME_TOKEN_ARG
+
 # Install packages
 RUN npm install --production && \
     rm -f .npmrc
