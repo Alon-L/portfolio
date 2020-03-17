@@ -13,6 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build docker
+        uses: HurricanKai/Publish-Docker-Github-Action@master
         with:
           name: alon/portfolio
           FONTAWESOME_TOKEN: ${{ secrets.FONTAWESOME_TOKEN }}
