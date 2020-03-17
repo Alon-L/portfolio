@@ -19,10 +19,14 @@ jobs:
           FONTAWESOME_TOKEN: ${{ secrets.FONTAWESOME_TOKEN }}
   run:
     runs-on: self-hosted
+    needs: [build]
     steps:
       - name: Stop docker
         run: |
           docker container stop portfolio || true
+      - name: Stop docker
+        run: |
+          docker container rm portfolio || true
       - name: Run docker
         run: |
           docker run --name portfolio -p $PORT:8080 -d alon/portfolio
