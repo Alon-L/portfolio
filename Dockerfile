@@ -11,9 +11,9 @@ COPY package*.json ./
 # Copy .npmrc for private packages
 COPY .npmrc .npmrc
 
-# RUN npm install
+RUN npm install
 # If you are building your code for production
-RUN npm ci --only=production
+# RUN npm ci --only=production
 
 # Delete .npmrc when finished
 RUN rm -f .npmrc
