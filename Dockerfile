@@ -13,7 +13,7 @@ COPY package.json package.json
 ARG FONTAWESOME_TOKEN
 
 # Copy .npmrc for private packages
-RUN echo -e "@fortawesome:registry=https://npm.fontawesome.com/\n//npm.fontawesome.com/:_authToken=$NPM_TOKEN" > .npmrc && \
+RUN echo -e "@fortawesome:registry=https://npm.fontawesome.com/\n//npm.fontawesome.com/:_authToken=$FONTAWESOME_TOKEN" > .npmrc && \
     npm install --production && \
     rm -f .npmrc
 
