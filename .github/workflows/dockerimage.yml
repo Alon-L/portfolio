@@ -5,11 +5,8 @@ on:
     branches: [ master ]
 
 jobs:
-
   build:
-
     runs-on: self-hosted
-
     steps:
       - uses: actions/checkout@v2
       - name: Build docker
@@ -20,3 +17,14 @@ jobs:
           .
         env:
           FONTAWESOME_TOKEN: ${{ secrets.FONTAWESOME_TOKEN }}
+  run:
+    runs-on: self-hosted
+    steps:
+      - name: Stop docker
+        run: |
+          docker container stop portfolio
+      - name: Run docker
+        run: |
+          docker run -p $PORT:8080 -d alon/portfolio --name portfolio
+        env:
+          PORT: ${{ secrets.PORT }}
