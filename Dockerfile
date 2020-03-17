@@ -1,4 +1,5 @@
-FROM node:12
+# First build
+FROM node:12 AS build
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -12,17 +13,18 @@ COPY package.json package.json
 ARG FONTAWESOME_TOKEN
 
 # Copy .npmrc for private packages
-COPY .npmrc .npmrc
+RUN echo -e "@fortawesome:registry=https://npm.fontawesome.com/\n//npm.fontawesome.com/:_authToken=$NPM_TOKEN" > .npmrc && \
+    npm install --production && \
+    rm -f .npmrc
 
-RUN npm install
-# If you are building your code for production
-# RUN npm ci --only=production
+# Second build
+FROM node:12
 
-# Delete .npmrc when finished
-RUN rm -f .npmrc
+WORKDIR /usr/src/app
 
 # Bundle app source
 COPY . .
+COPY --from=build /usr/src/app /usr/src/app
 
 # Install PM2
 RUN npm install pm2 -g
