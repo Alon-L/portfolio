@@ -27,14 +27,13 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
-          {
-            loader: 'sass-loader',
-          }
+          'postcss-loader',
+          'sass-loader',
         ]
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader', 'postcss-loader']
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.(eot|woff|woff2|ttf|png|jpg|gif)$/,

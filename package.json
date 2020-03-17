@@ -40,26 +40,19 @@
     "webpack-node-externals": "^1.7.2"
   },
   "scripts": {
-    "start": "webpack-dev-server --open --mode development",
-    "build": "webpack --mode production",
+    "start": "webpack-dev-server --open --mode=development",
+    "build": "webpack --mode=production",
     "ssr": "webpack --config webpack.production.config.js && node dist/server.js",
     "build-and-ssr": "npm run build && npm run ssr"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
