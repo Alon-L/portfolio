@@ -13,6 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build docker
-        run: docker-compose up -e FONTAWESOME_TOKEN=$FONTAWESOME_TOKEN
+        run: docker-compose build -e FONTAWESOME_TOKEN=$FONTAWESOME_TOKEN
         env:
           FONTAWESOME_TOKEN: ${{ secrets.FONTAWESOME_TOKEN }}
