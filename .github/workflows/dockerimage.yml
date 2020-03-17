@@ -12,9 +12,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Create .npmrc
-        run: echo -e "@fortawesome:registry=https://npm.fontawesome.com/\n//npm.fontawesome.com/:_authToken=$FONTAWESOME_TOKEN" > .npmrc
+      - name: Build docker
+        run: sudo docker build -t alon/portfolio --build-arg FONTAWESOME_TOKEN_ARG=$FONTAWESOME_TOKEN .
         env:
           FONTAWESOME_TOKEN: ${{ secrets.FONTAWESOME_TOKEN }}
-      - name: Build docker
-        run: sudo docker build -t alon/portfolio .
