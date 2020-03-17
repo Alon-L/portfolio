@@ -14,5 +14,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Dump license contexts
+      env:
+        - FONTAWESOME_TOKEN: ${{ secrets.FONTAWESOME_TOKEN }}
+      run: echo "$FONTAWESOME_TOKEN"
     - name: Build the Docker image
-      run: docker build -t alon/portfolio .
+      run: sudo docker build -t alon/portfolio --build-arg FONTAWESOME_TOKEN="$FONTAWESOME_TOKEN" .
