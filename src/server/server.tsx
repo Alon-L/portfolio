@@ -8,6 +8,7 @@ import { StaticRouter } from 'react-router-dom';
 import { StaticRouterContext } from 'react-router';
 
 const app = express();
+const port = process.env.PORT || 8080;
 
 const templateFn = (html: string) => {
   return fs.readFileSync(path.join(process.cwd(), 'dist/index.html'), 'utf8')
@@ -30,4 +31,4 @@ app.get('*', (req: Request, res: Response) => {
   res.send(template);
 });
 
-app.listen(3000, () => console.log('Listening to port 3000!'));
+app.listen(port, () => console.log(`Listening to port ${port}!`));

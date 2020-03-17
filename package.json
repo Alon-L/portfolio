@@ -18,8 +18,6 @@
     "@types/react-redux": "^7.1.1",
     "@types/react-router": "^5.0.3",
     "@types/react-router-dom": "^4.3.4",
-    "@types/redux": "^3.6.0",
-    "@types/redux-thunk": "^2.1.0",
     "bootstrap": "^4.4.1",
     "dotenv": "^8.2.0",
     "ejs": "^3.0.1",
@@ -42,26 +40,19 @@
     "webpack-node-externals": "^1.7.2"
   },
   "scripts": {
-    "start": "webpack-dev-server --open --mode development",
-    "build": "webpack --mode production",
+    "start": "webpack-dev-server --open --mode=development",
+    "build": "webpack --mode=production",
     "ssr": "webpack --config webpack.production.config.js && node dist/server.js",
     "build-and-ssr": "npm run build && npm run ssr"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all"
+  ],
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
@@ -72,6 +63,7 @@
     "@types/react-dom": "^16.8.5",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
+    "autoprefixer": "^9.7.4",
     "babel-loader": "^8.0.6",
     "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.0.0",
@@ -88,6 +80,7 @@
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.7.0",
     "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
     "prettier": "^1.18.2",
     "prop-types": "^15.7.2",
     "redux-devtools-extension": "^2.13.8",

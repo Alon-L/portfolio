@@ -58,3 +58,6 @@ package.json
 # Webpack
 webpack.config.js
 webpack.production.config.js
+
+# PM2
+ecosystem.config.js
