@@ -16,7 +16,7 @@ jobs:
         run: |
           docker build \
           -t alon/portfolio \
-          --build-arg FONTAWESOME_TOKEN_ARG=$FONTAWESOME_TOKEN \
+          --build-arg FONTAWESOME_TOKEN=$FONTAWESOME_TOKEN \
           .
         env:
           FONTAWESOME_TOKEN: ${{ secrets.FONTAWESOME_TOKEN }}
