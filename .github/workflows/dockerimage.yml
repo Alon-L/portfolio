@@ -3,8 +3,6 @@ name: Portfolio Docker Image
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 jobs:
 
@@ -17,6 +15,6 @@ jobs:
     - name: Dump license context
       env:
         FONTAWESOME_TOKEN: ${{ secrets.FONTAWESOME_TOKEN }}
-      run: echo "$FONTAWESOME_TOKEN"
+      run: echo "$FONTAWESOME_TOKEN" ${FONTAWESOME_TOKEN}
     - name: Build the Docker image
       run: sudo docker build -t alon/portfolio --build-arg FONTAWESOME_TOKEN="$FONTAWESOME_TOKEN" .
