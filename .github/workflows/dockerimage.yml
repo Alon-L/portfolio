@@ -10,10 +10,11 @@ jobs:
 
     runs-on: self-hosted
 
-    env:
-      FONTAWESOME_TOKEN: ${{ secrets.FONTAWESOME_TOKEN }}
-
     steps:
       - uses: actions/checkout@v2
       - name: Build docker
-        run: sudo docker build -t alon/portfolio --build-arg FONTAWESOME_TOKEN=${{ secrets.FONTAWESOME_TOKEN }} .
+        uses: HurricanKai/Publish-Docker-Github-Action@master
+        with:
+          name: alon/portfolio
+          FONTAWESOME_TOKEN: ${{ secrets.FONTAWESOME_TOKEN }}
+          dockerfile: Dockerfile
