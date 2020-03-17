@@ -8,6 +8,9 @@ WORKDIR /usr/src/app
 # where available (npm@5+)
 COPY package.json package.json
 
+# License arguments
+ARG FONTAWESOME_TOKEN
+
 # Copy .npmrc for private packages
 COPY .npmrc .npmrc
 
