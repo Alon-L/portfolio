@@ -21,10 +21,10 @@ jobs:
     runs-on: self-hosted
     needs: [build]
     steps:
-      - name: Stop docker
+      - name: Stop docker container
         run: |
           docker container stop portfolio || true
-      - name: Stop docker
+      - name: Remove docker container
         run: |
           docker container rm portfolio || true
       - name: Run docker
