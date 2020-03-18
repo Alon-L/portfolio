@@ -46,7 +46,7 @@ class ProjectsPage extends Component<Props, State> {
       <Fragment>
         <ProjectGoBack color={color}/>
         <ReactFullpage
-          licenseKey={process.env.FULL_JS_LICENSE_KEY}
+          licenseKey={process.env.FULLPAGE_JS_LICENSE_KEY}
           scrollingSpeed={1000}
           navigation={true}
           navigationPosition={'right'}

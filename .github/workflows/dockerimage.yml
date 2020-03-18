@@ -29,6 +29,17 @@ jobs:
           docker container rm portfolio || true
       - name: Run docker
         run: |
-          docker run --name portfolio -p $PORT:8080 -d alon/portfolio
+          docker run \
+          --name portfolio \
+          --env FULLPAGE_JS_LICENSE_KEY \
+          --env EMAIL_JS_SERVICE_ID \
+          --env EMAIL_JS_TEMPLATE_ID \
+          --env EMAIL_JS_USER_ID \
+          -p $PORT:8080 \
+          -d alon/portfolio
         env:
           PORT: ${{ secrets.PORT }}
+          FULLPAGE_JS_LICENSE_KEY: ${{ secrets.FULLPAGE_JS_LICENSE_KEY }}
+          EMAIL_JS_SERVICE_ID: ${{ secrets.EMAIL_JS_SERVICE_ID }}
+          EMAIL_JS_TEMPLATE_ID: ${{ secrets.EMAIL_JS_TEMPLATE_ID }}
+          EMAIL_JS_USER_ID: ${{ secrets.EMAIL_JS_USER_ID }}
