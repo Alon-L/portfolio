@@ -25,6 +25,9 @@ jobs:
       - name: Stop docker container
         run: |
           docker container stop portfolio || true
+      - name: Delete untagged images
+        run: |
+          docker rmi $(docker images --filter "dangling=true" -q --no-trunc) || true
       - name: Run docker
         run: |
           docker run \
