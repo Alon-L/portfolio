@@ -14,6 +14,7 @@ jobs:
           docker build \
           -t alon/portfolio \
           --build-arg FONTAWESOME_TOKEN=$FONTAWESOME_TOKEN \
+          --rm \
           .
         env:
           FONTAWESOME_TOKEN: ${{ secrets.FONTAWESOME_TOKEN }}
@@ -24,9 +25,6 @@ jobs:
       - name: Stop docker container
         run: |
           docker container stop portfolio || true
-      - name: Remove docker container
-        run: |
-          docker container rm portfolio || true
       - name: Run docker
         run: |
           docker run \
@@ -35,6 +33,7 @@ jobs:
           --env EMAIL_JS_SERVICE_ID \
           --env EMAIL_JS_TEMPLATE_ID \
           --env EMAIL_JS_USER_ID \
+          --rm \
           -p $PORT:8080 \
           -d alon/portfolio
         env:
