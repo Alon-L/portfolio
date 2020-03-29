@@ -36,6 +36,7 @@ jobs:
           --env EMAIL_JS_SERVICE_ID \
           --env EMAIL_JS_TEMPLATE_ID \
           --env EMAIL_JS_USER_ID \
+          --rm \
           -p $PORT:8080 \
           -d alon/portfolio
         env:
