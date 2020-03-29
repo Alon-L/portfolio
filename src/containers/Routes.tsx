@@ -17,11 +17,11 @@ class Routes extends Component {
     return (
       <main>
         <Switch>
-          <Route exact={true} path="/" component={LandingPage}/>
+          <Route exact path="/" component={LandingPage}/>
 
           {
             this.projectsRoutes.map(({ projects, path }) => (
-              <Route key={path} path={path} component={() => (
+              <Route key={path} path={path} sensitive component={() => (
                 <ProjectsPage projects={projects} path={path}/>
               )}/>
             ))
