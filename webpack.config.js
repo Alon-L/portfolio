@@ -64,8 +64,8 @@ module.exports = {
       favicon: './public/favicon.ico',
       title: 'Alon Livne',
       meta: {
-        title: 'Alon Livne',
-        description: 'Alon Livne - Fullstack Developer',
+        title: 'Alon Livne - Fullstack Developer',
+        description: 'Hello! My name is Alon, and I am a Computer Science college student. I specialize in Fullstack development and Web development in particular',
         keywords: 'fullstack,developer,alon livne,alon,livne,frontend,backend,software engineer,discord bots,bots,alonlivne.dev',
         robots: 'index, follow',
         language: 'English'
