@@ -17,17 +17,23 @@ class Routes extends Component {
     return (
       <main>
         <Switch>
-          <Route exact={true} path="/" component={LandingPage}/>
+          <Route exact path="/" component={LandingPage}/>
 
           {
             this.projectsRoutes.map(({ projects, path }) => (
-              <Route key={path} path={path} component={() => (
+              <Route key={path} path={path} sensitive component={() => (
                 <ProjectsPage projects={projects} path={path}/>
               )}/>
             ))
           }
 
-          <Route path="*" component={Page404}/>
+          <Route path="*" render={({ staticContext }) => {
+            if (staticContext) {
+              staticContext.statusCode = 404;
+            }
+
+            return <Page404 />
+          }}/>
         </Switch>
       </main>
     );
