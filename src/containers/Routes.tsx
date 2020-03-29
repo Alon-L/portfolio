@@ -5,7 +5,7 @@ import Page404 from '../components/pages/page404/Page404';
 import ProjectsPage, { Project } from '../components/pages/projects/ProjectsPage';
 import specialties from '../internals/config/specialties.json';
 
-interface ProjectsRoute {
+export interface ProjectsRoute {
   projects: Project[];
   path: string;
 }

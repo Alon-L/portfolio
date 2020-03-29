@@ -4,7 +4,7 @@ import { ReactFullPageTypes } from '../../../types';
 import path from 'path';
 import ProjectGoBack from './ProjectGoBack';
 import ProjectSection from './section/ProjectSection';
-import { ProjectsRoute } from '../../../containers/ProjectsRoutes';
+import { ProjectsRoute } from '../../../containers/Routes';
 
 export interface ProjectButtons {
   visit?: string;
