@@ -27,7 +27,13 @@ class Routes extends Component {
             ))
           }
 
-          <Route path="*" component={Page404}/>
+          <Route path="*" render={({ staticContext }) => {
+            if (staticContext) {
+              staticContext.statusCode = 404;
+            }
+
+            return <Page404 />
+          }}/>
         </Switch>
       </main>
     );
