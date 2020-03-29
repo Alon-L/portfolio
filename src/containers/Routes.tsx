@@ -21,7 +21,7 @@ class Routes extends Component {
 
           {
             this.projectsRoutes.map(({ projects, path }) => (
-              <Route key={path} path={path} sensitive component={() => (
+              <Route key={path} path={path} component={() => (
                 <ProjectsPage projects={projects} path={path}/>
               )}/>
             ))
