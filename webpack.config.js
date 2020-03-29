@@ -62,7 +62,7 @@ module.exports = {
       template: './public/index.html',
       filename: './index.html',
       favicon: './public/favicon.ico',
-      title: 'Alon Livne',
+      title: 'Alon Livne - Fullstack Developer',
       meta: {
         title: 'Alon Livne - Fullstack Developer',
         description: 'Hello! My name is Alon, and I am a Computer Science college student. I specialize in Fullstack development and Web development in particular',
