@@ -20,7 +20,7 @@ class HomeContentSocials extends Component {
     {
       icon: faGithub,
       name: 'GitHub',
-      href: 'https://github.com/DayColor'
+      href: 'https://github.com/Alon-L'
     },
     {
       icon: faEnvelope,
