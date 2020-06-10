@@ -15,12 +15,12 @@ class HomeContentSocials extends Component {
     {
       icon: faTwitter,
       name: 'Twitter',
-      href: 'https://twitter.com/daycolor_'
+      href: 'https://twitter.com/AlonL_'
     },
     {
       icon: faGithub,
       name: 'GitHub',
-      href: 'https://github.com/DayColor'
+      href: 'https://github.com/Alon-L'
     },
     {
       icon: faEnvelope,

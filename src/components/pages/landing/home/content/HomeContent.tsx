@@ -9,9 +9,9 @@ class HomeContent extends Component {
         <hr className="home-content-hr color-brand w-75 ml-0"/>
         <div className="mb-5">
           <h3 className="font-weight-bold">Fullstack Development at its Peak</h3>
-          <p>Hello! My name is Alon, and I am a Computer Science college student.
+          <p>Hello! My name is Alon, and I am a Computer Science student.
             I specialize in Fullstack development and Web development in particular.
-            I mainly use ReactJS along with TypeScript and a few more powerful tools for frontend, and ExpressJS for my backend apps. I have a strong passion for learning new technologies and deepen into new systems and tools.</p>
+            I mainly use ReactJS along with TypeScript and a few more powerful tools for frontend, and ExpressJS or Go for my backend apps. I have a strong passion for learning new technologies and deepen into new systems and tools.</p>
         </div>
         <HomeContentSocials/>
       </div>

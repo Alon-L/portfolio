@@ -56,16 +56,17 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
   },
   plugins: [
     new HtmlWebPackPlugin({
       template: './public/index.html',
       filename: './index.html',
       favicon: './public/favicon.ico',
-      title: 'Alon Livne',
+      title: 'Alon Livne - Fullstack Developer',
       meta: {
-        title: 'Alon Livne',
-        description: 'Alon Livne - Fullstack Developer',
+        title: 'Alon Livne - Fullstack Developer',
+        description: 'Hello! My name is Alon, and I am a Computer Science college student. I specialize in Fullstack development and Web development in particular',
         keywords: 'fullstack,developer,alon livne,alon,livne,frontend,backend,software engineer,discord bots,bots,alonlivne.dev',
         robots: 'index, follow',
         language: 'English'
@@ -77,7 +78,7 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       'process.env': {
-        'FULL_JS_LICENSE_KEY': JSON.stringify(process.env.FULL_JS_LICENSE_KEY),
+        'FULLPAGE_JS_LICENSE_KEY': JSON.stringify(process.env.FULLPAGE_JS_LICENSE_KEY),
         'EMAIL_JS_SERVICE_ID': JSON.stringify(process.env.EMAIL_JS_SERVICE_ID),
         'EMAIL_JS_TEMPLATE_ID': JSON.stringify(process.env.EMAIL_JS_TEMPLATE_ID),
         'EMAIL_JS_USER_ID': JSON.stringify(process.env.EMAIL_JS_USER_ID),

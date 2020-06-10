@@ -5,20 +5,43 @@ on:
     branches: [ master ]
 
 jobs:
-
   build:
-
     runs-on: self-hosted
-
     steps:
       - uses: actions/checkout@v2
-      - name: Dump license context
-        run: echo $FONTAWESOME_TOKEN
+      - name: Build docker
+        run: |
+          docker build \
+          -t alon/portfolio \
+          --build-arg FONTAWESOME_TOKEN=$FONTAWESOME_TOKEN \
+          --rm \
+          .
         env:
           FONTAWESOME_TOKEN: ${{ secrets.FONTAWESOME_TOKEN }}
-      - name: Test env variable
-        run: echo Hello World! $TEST_123
+  run:
+    runs-on: self-hosted
+    needs: [build]
+    steps:
+      - name: Stop docker container
+        run: |
+          docker container stop portfolio || true
+      - name: Delete untagged images
+        run: |
+          docker rmi $(docker images --filter "dangling=true" -q --no-trunc) || true
+      - name: Run docker
+        run: |
+          docker run \
+          --name portfolio \
+          --env FULLPAGE_JS_LICENSE_KEY \
+          --env EMAIL_JS_SERVICE_ID \
+          --env EMAIL_JS_TEMPLATE_ID \
+          --env EMAIL_JS_USER_ID \
+          --rm \
+          -p $PORT:8080 \
+          -d alon/portfolio
         env:
-          TEST_123: Test
-      - name: Build the Docker image
-        run: sudo docker build -t alon/portfolio --build-arg FONTAWESOME_TOKEN=$TEST_123 .
+          PORT: ${{ secrets.PORT }}
+          FULLPAGE_JS_LICENSE_KEY: ${{ secrets.FULLPAGE_JS_LICENSE_KEY }}
+          EMAIL_JS_SERVICE_ID: ${{ secrets.EMAIL_JS_SERVICE_ID }}
+          EMAIL_JS_TEMPLATE_ID: ${{ secrets.EMAIL_JS_TEMPLATE_ID }}
+          EMAIL_JS_USER_ID: ${{ secrets.EMAIL_JS_USER_ID }}

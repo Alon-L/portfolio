@@ -26,6 +26,10 @@ app.get('*', (req: Request, res: Response) => {
     </StaticRouter>
   );
 
+  if (context.statusCode) {
+    res.status(context.statusCode);
+  }
+
   const template = templateFn(html);
 
   res.send(template);
