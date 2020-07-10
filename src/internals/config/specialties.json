@@ -22,6 +22,19 @@
           "visit": "https://plicked.alonlivne.dev"
         }
       },
+	  {
+        "title": "Storm Social",
+        "desc": "Storm Social offers social media growth and constantly hosts giveaways for social media related rewards. The static website, integrates with Shopify as a backend to securely handle store purchases. It includes multiple product, giveaway, general and more miscellaneous pages.",
+        "toolsUsed": "I used ReactJS along with TypeScript, Redux and SCSS for the website. I have also used TailwindCSS for stylizing. The website is integrated with Shopify as a backend service.",
+        "background": "storm-social.png",
+        "colors": {
+          "primary": "#02a2e0",
+          "secondary": "#38c3fa"
+        },
+        "buttons": {
+          "visit": "https://storm-social.alonlivne.dev"
+        }
+      },
       {
         "title": "WumpCraft Website",
         "desc": "WumpCraft is a Discord Bot explicitly created for Discord's Hack Week 2019 competition. This website is a simple static site that I developed in under 2 hours. The website lists the available bot commands and displays my social media links.",
