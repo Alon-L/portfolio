@@ -32,7 +32,8 @@
           "secondary": "#38c3fa"
         },
         "buttons": {
-          "visit": "https://storm-social.alonlivne.dev"
+          "visit": "https://storm-social.alonlivne.dev",
+		  "source": "https://github.com/Alon-L/storm-social"
         }
       },
       {
