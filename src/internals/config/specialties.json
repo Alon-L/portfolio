@@ -195,6 +195,19 @@
         }
       },
       {
+        "title": "Repo Lines Counter",
+        "desc": "Repo Lines Counter introduces a way to produce an output file that contains the number of lines for every selected file and directory in a specific repository. The tool clones the repository and uses Perl's powerful text manipulation tools to scan the files and produce the output.",
+        "toolsUsed": "The tool is entirely written in object-oriented Perl and uses the third-party JSON library.",
+        "background": "repo-lines-counter.png",
+        "colors": {
+          "primary": "#46e3c6",
+          "secondary": "#36d1b5"
+        },
+        "buttons": {
+          "source": "https://github.com/Alon-L/repo-lines-counter"
+        }
+      },
+      {
         "title": "SMS Notifier Bot",
         "desc": "SMS Notifier Bot notifies you on Discord when you receive SMS messages on your mobile device. The project is split into two parts: an android application and a Discord Bot.\nThe android application listens for any incoming notifications on the device and sends them to the Discord Bot, which then notifies the user.",
         "toolsUsed": "The android application was built using Kotlin, and the Discord Bot uses the Discord.JS library.",
