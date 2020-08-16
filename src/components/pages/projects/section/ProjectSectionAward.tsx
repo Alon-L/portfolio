@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrophy } from '@fortawesome/pro-solid-svg-icons';
+import { faTrophy } from '@fortawesome/free-solid-svg-icons';
 
 interface Props {
   color: string;

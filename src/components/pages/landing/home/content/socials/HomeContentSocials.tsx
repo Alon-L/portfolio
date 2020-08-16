@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import HomeContentSocial from './HomeContentSocial';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/pro-solid-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 export interface Social {
   icon: IconDefinition;

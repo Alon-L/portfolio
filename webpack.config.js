@@ -12,15 +12,15 @@ module.exports = {
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         test: /\.html$/,
         use: [
           {
-            loader: 'html-loader'
-          }
-        ]
+            loader: 'html-loader',
+          },
+        ],
       },
       {
         test: /\.(scss|sass)$/,
@@ -29,26 +29,26 @@ module.exports = {
           'css-loader',
           'postcss-loader',
           'sass-loader',
-        ]
+        ],
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader']
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.(eot|woff|woff2|ttf|png|jpg|gif)$/,
-        loader: 'url-loader'
+        loader: 'url-loader',
       },
       {
         test: /\.svg$/,
         use: {
           loader: '@svgr/webpack',
           options: {
-            ref: true
-          }
+            ref: true,
+          },
         },
       },
-    ]
+    ],
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
@@ -69,8 +69,8 @@ module.exports = {
         description: 'Hello! My name is Alon, and I am a Computer Science college student. I specialize in Fullstack development and Web development in particular',
         keywords: 'fullstack,developer,alon livne,alon,livne,frontend,backend,software engineer,discord bots,bots,alonlivne.dev',
         robots: 'index, follow',
-        language: 'English'
-      }
+        language: 'English',
+      },
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
@@ -84,14 +84,16 @@ module.exports = {
         'EMAIL_JS_USER_ID': JSON.stringify(process.env.EMAIL_JS_USER_ID),
       },
     }),
-    new CopyWebpackPlugin([{
-      from: 'src/assets', to: 'assets'
-    }]),
+    new CopyWebpackPlugin({
+      patterns: [{
+        from: 'src/assets', to: 'assets',
+      }],
+    }),
   ],
   devServer: {
     contentBase: [
       './public/index.html',
-      path.join(__dirname, 'src/assets')
+      path.join(__dirname, 'src/assets'),
     ],
     historyApiFallback: true,
   },

@@ -8,15 +8,8 @@ WORKDIR /usr/src/app
 # where available (npm@5+)
 COPY package*.json ./
 
-# Copy .npmrc for private packages
-COPY .npmrc .npmrc
-
-ARG FONTAWESOME_TOKEN
-ENV FONTAWESOME_TOKEN=$FONTAWESOME_TOKEN
-
 # Install packages
-RUN npm ci && \
-    rm -f .npmrc
+RUN npm ci
 
 # Bundle app source
 COPY . .
