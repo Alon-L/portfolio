@@ -47,7 +47,7 @@
         },
         "buttons": {
           "visit": "https://wumpcraft.alonlivne.dev/",
-          "source": "https://github.com/DayColor/wumpcraft-website"
+          "source": "https://github.com/Alon-L/wumpcraft-website"
         }
       },
       {
@@ -127,7 +127,7 @@
           "secondary": "#bf1515"
         },
         "buttons": {
-          "source": "https://github.com/DayColor/json-documentation-file-generator"
+          "source": "https://github.com/Alon-L/json-documentation-file-generator"
         }
       },
       {
@@ -140,7 +140,7 @@
           "secondary": "#15bf87"
         },
         "buttons": {
-          "source": "https://github.com/DayColor/currency-converter-extension"
+          "source": "https://github.com/Alon-L/currency-converter-extension"
         }
       },
       {
@@ -153,7 +153,7 @@
           "secondary": "#562adb"
         },
         "buttons": {
-          "source": "https://github.com/DayColor/typeracer-practice-extension"
+          "source": "https://github.com/Alon-L/typeracer-practice-extension"
         }
       },
       {
@@ -166,7 +166,7 @@
           "secondary": "#db3257"
         },
         "buttons": {
-          "source": "https://github.com/DayColor/css-variables-remover"
+          "source": "https://github.com/Alon-L/css-variables-remover"
         }
       }
     ]
@@ -191,7 +191,8 @@
           "secondary": "#42a6c9"
         },
         "buttons": {
-          "source": "https://github.com/DayColor/ascii-art-video"
+	  "visit": "https://ascii-art-video.alonlivne.dev",
+          "source": "https://github.com/Alon-L/ascii-art-video"
         }
       },
       {
@@ -217,7 +218,7 @@
           "secondary": "#5a3ab5"
         },
         "buttons": {
-          "source": "https://github.com/DayColor/SMS-Discord-Bot"
+          "source": "https://github.com/Alon-L/SMS-Discord-Bot"
         }
       },
       {
@@ -230,7 +231,7 @@
           "secondary": "#42c97a"
         },
         "buttons": {
-          "source": "https://github.com/DayColor/ascii-art"
+          "source": "https://github.com/Alon-L/ascii-art"
         }
       }
     ]
@@ -256,7 +257,7 @@
         },
         "buttons": {
           "visit": "https://wumpcraft.xyz",
-          "source": "https://github.com/DayColor/wumpcraft"
+          "source": "https://github.com/Alon-L/wumpcraft"
         },
         "award": true
       },
