@@ -11,7 +11,7 @@
     "projects": [
       {
         "title": "Keyma.sh",
-        "desc": "Keyma.sh is an online multiplayer typing game, where you can race other players by typing the fastest. I have helped with the development a few core gameplay systems for the game. The website has progressed a lot throughout its existent and has become well-known to typists on the internet.",
+        "desc": "Keyma.sh is an online multiplayer typing game, where you can race other players by typing the fastest. I have helped with the development a few core gameplay systems for the game. The website has progressed a lot throughout its existence and has become well-known to typists on the internet.",
         "toolsUsed": "The website uses ReactJS, TypeScript and SCSS. Some logic mechanics of the website depend on a combination of JSX, JavaScript and CSS.",
         "background": "keymash.png",
         "colors": {
