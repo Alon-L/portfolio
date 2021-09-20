@@ -10,6 +10,19 @@
     "placeholder": "frontend-placeholder.jpg",
     "projects": [
       {
+        "title": "Keyma.sh",
+        "desc": "Keyma.sh is an online multiplayer typing game, where you can race other players by typing the fastest. I have helped with the development a few core gameplay systems for the game. The website has progressed a lot throughout its existent and has become well-known to typists on the internet.",
+        "toolsUsed": "The website uses ReactJS, TypeScript and SCSS. Some logic mechanics of the website depend on a combination of JSX, JavaScript and CSS.",
+        "background": "keymash.png",
+        "colors": {
+          "primary": "#fb932c",
+          "secondary": "#d87f26"
+        },
+        "buttons": {
+          "visit": "https://keyma.sh"
+        }
+      },
+      {
         "title": "Plicked - SMM",
         "desc": "Plicked is a social media marketing service. I was requested to create a static website and a panel design for them. The site includes multiple pages, navigations, and cleanly designed sections.",
         "toolsUsed": "The website is built entirely on ReactJS. I also used TypeScript, Webpack, Redux, and SCSS, along with Bootstrap, for stylizing. The site also required a panel design, for that I used static HTML, CSS, and JavaScript for special effects. The panel was quite limiting, but I am happy with the final results.",
@@ -22,7 +35,7 @@
           "visit": "https://plicked.alonlivne.dev"
         }
       },
-	  {
+      {
         "title": "Storm Social",
         "desc": "Storm Social offers social media growth and constantly hosts giveaways for social media related rewards. The static website, integrates with Shopify as a backend to securely handle store purchases. It includes multiple product, giveaway, general and more miscellaneous pages.",
         "toolsUsed": "I used ReactJS along with TypeScript, Redux and SCSS for the website. I have also used TailwindCSS for stylizing. The website is integrated with Shopify as a backend service.",
